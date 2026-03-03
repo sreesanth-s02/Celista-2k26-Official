@@ -1,5 +1,4 @@
-import CircularGallery from "../components/CircularGallery";
-import { motion } from "framer-motion";
+import DomeGallery from "../components/DomeGallery";
 import { useNavigate } from "react-router-dom";
 
 import M2 from "../assets/M2.jpeg";
@@ -15,81 +14,77 @@ import Mi from "../assets/Mi.jpeg";
 export default function Memories() {
   const navigate = useNavigate();
 
-  const galleryImages = [
-    { image: M2, text: "" },
-    { image: M3, text: "" },
-    { image: M4, text: "" },
-    { image: M5, text: "" },
-    { image: M6, text: "" },
-    { image: M7, text: "" },
-    { image: M8, text: "" },
-    { image: M9, text: "" },
-    { image: Mi, text: "" },
+  const images = [
+    { src: M2, alt: "Celista Memory 1" },
+    { src: M3, alt: "Celista Memory 2" },
+    { src: M4, alt: "Celista Memory 3" },
+    { src: M5, alt: "Celista Memory 4" },
+    { src: M6, alt: "Celista Memory 5" },
+    { src: M7, alt: "Celista Memory 6" },
+    { src: M8, alt: "Celista Memory 7" },
+    { src: M9, alt: "Celista Memory 8" },
+    { src: Mi, alt: "Celista Memory 9" }
   ];
 
-  const handleBack = () => {
-    navigate("/");
-    setTimeout(() => {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }, 50);
-  };
-
   return (
-    <div className="relative w-full min-h-screen bg-black text-white overflow-hidden">
+    <div className="w-full min-h-screen bg-transparent overflow-hidden relative">
 
-      {/* ===== Back Button ===== */}
-      <button
-        onClick={handleBack}
-        className="
-          fixed top-8 left-8 z-50
-          px-6 py-2
-          border border-red-600
-          text-red-600
-          uppercase tracking-widest
-          transition-all duration-300
-          hover:bg-red-600 hover:text-black
-        "
-      >
-        ← Back
-      </button>
+     {/* TITLE ROW */}
+<div className="relative w-full flex items-center justify-center pt-20 pb-6">
 
-      {/* ===== Title Section ===== */}
-      <div className="text-center pt-28 pb-16">
+  {/* Back Button - Left */}
+  <button
+    onClick={() => navigate("/")}
+    className="absolute left-6 sm:left-10
+               w-10 h-10 flex items-center justify-center
+               rounded-full
+               border border-red-500/60
+               bg-black/40 backdrop-blur-md
+               transition-all duration-300
+               hover:bg-red-600
+               hover:border-red-600
+               hover:shadow-[0_0_15px_rgba(255,0,0,0.7)]"
+  >
+    <span className="text-red-500 text-lg transition-all duration-300 hover:text-black">
+      ←
+    </span>
+  </button>
 
-        <motion.h1
-          initial={{ opacity: 0, y: -60 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, ease: "easeOut" }}
-          className="relative text-4xl md:text-6xl lg:text-7xl tracking-widest text-red-600"
-          style={{ fontFamily: "Orbitron, sans-serif" }}
-        >
-          Memories of Celista-2K25
+  {/* Gallery Title */}
+  <h1
+    className="text-4xl sm:text-5xl md:text-6xl
+               text-red-600 font-medium
+               tracking-[0.15em]"
+    style={{
+      fontFamily: "'Orbitron', sans-serif",
+      textShadow: "0 0 10px rgba(255,0,0,0.7)"
+    }}
+  >
+    GALLERY
+  </h1>
 
-          {/* Glow */}
-          <span className="absolute inset-0 text-red-600 blur-2xl opacity-40 pointer-events-none">
-            Memories of Celista-2K25
-          </span>
-        </motion.h1>
+</div>
 
-        <motion.div
-          initial={{ width: 0 }}
-          animate={{ width: "240px" }}
-          transition={{ duration: 1.2, delay: 0.5 }}
-          className="h-[3px] bg-red-600 mx-auto mt-6 rounded-full"
-        />
-      </div>
-
-      {/* ===== Circular Gallery ===== */}
-      <div style={{ height: "75vh", position: "relative" }}>
-        <CircularGallery
-          items={galleryImages}
-          bend={5}
-          textColor="#ffffff"
-          borderRadius={0.05}
-          scrollSpeed={1.5}
-          scrollEase={0.03}
-        />
-      </div>
+      {/* DOME GALLERY */}
+<div className="relative w-screen h-[80vh] overflow-hidden">
+  <div className="absolute left-1/2 -translate-x-1/2 w-[120vw] h-full">
+    <DomeGallery
+  images={images}
+  fit={9}              // <-- Increase this
+  minRadius={0}
+  maxRadius={10000}      // <-- Remove radius restriction
+  maxVerticalRotationDeg={5}
+  segments={34}
+  dragDampening={0.7}
+  grayscale={false}
+  overlayBlurColor="#000000"
+  imageBorderRadius="20px"
+  openedImageBorderRadius="25px"
+  openedImageWidth="95vw"
+  openedImageHeight="95vh"
+/>
+  </div>
+</div>
 
     </div>
   );

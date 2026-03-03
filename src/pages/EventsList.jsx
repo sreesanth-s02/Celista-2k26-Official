@@ -47,11 +47,15 @@ export default function EventsList() {
   };
 
   // Separate AI Arena for Technical
-  const flagshipEvent = isTechnical ? filteredEvents.find(e => e.name === "AI Arena") : null;
-  const displayEvents = isTechnical ? filteredEvents.filter(e => e.name !== "AI Arena") : filteredEvents;
+  let displayEvents = filteredEvents;
+  if (isTechnical) {
+    const aiArena = filteredEvents.find((e) => e.name === "AI Arena");
+    const others = filteredEvents.filter((e) => e.name !== "AI Arena");
+    if (aiArena) displayEvents = [aiArena, ...others];
+  }
 
   return (
-    <div className="min-h-screen bg-black px-4 sm:px-8 lg:px-12 pt-24 pb-16 overflow-x-hidden font-inter">
+    <div className="min-h-screen px-4 sm:px-8 lg:px-12 pt-24 pb-16 overflow-x-hidden font-inter">
       <div className="max-w-7xl mx-auto">
 
         {/* BACK BUTTON */}
@@ -67,37 +71,13 @@ export default function EventsList() {
         </motion.button>
 
         {/* TITLE */}
-        <h1 className={`text-3xl md:text-5xl font-bold mb-16 text-center uppercase tracking-widest ${theme.text} ${theme.headingShadow}`}>
+        <h1 className={`text-3xl md:text-5xl font-orbitron font-light mb-16 text-center uppercase tracking-widest ${theme.text} ${theme.headingShadow}`}>
           {category} Events
         </h1>
 
-        {/* FLAGSHIP EVENT (Technical Only) */}
-        {flagshipEvent && (
-          <div className="relative w-full mt-20 mb-24">
-            {/* Background Stage */}
-            <div className="absolute inset-0 bg-gradient-to-b from-blue-950/20 via-black to-black -z-10" />
-            
-            {/* Halo Glow */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3/4 h-3/4 blur-3xl bg-blue-500/10 rounded-full -z-10" />
-
-            <div className="max-w-6xl mx-auto px-6">
-              <motion.div 
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-              >
-                <FeaturedCard event={flagshipEvent} navigate={navigate} category={category} />
-              </motion.div>
-            </div>
-
-            {/* Divider Line */}
-            <div className="w-full max-w-4xl mx-auto h-px bg-gradient-to-r from-transparent via-blue-900/50 to-transparent mt-20" />
-          </div>
-        )}
-
         {/* GRID */}
         <motion.div 
-          className={isTechnical ? "grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto mt-10" : "flex flex-wrap justify-center gap-8 sm:gap-10"}
+          className="flex flex-wrap justify-center gap-8 sm:gap-10"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
@@ -107,7 +87,7 @@ export default function EventsList() {
               <motion.div
                 key={event.id}
                 variants={itemVariants}
-                className={isTechnical ? "flex justify-center w-full" : "flex justify-center w-full sm:w-[calc(50%-1.25rem)] lg:w-[calc(33.333%-1.67rem)]"}
+                className="flex justify-center w-full sm:w-[calc(50%-1.25rem)] lg:w-[calc(33.333%-1.67rem)]"
               >
                 <FlipCard
                   event={event}
@@ -120,7 +100,7 @@ export default function EventsList() {
         </motion.div>
 
         {/* EMPTY STATE */}
-        {displayEvents.length === 0 && !flagshipEvent && (
+        {displayEvents.length === 0 && (
           <p className="text-gray-400 text-center mt-20 text-lg">
             No events found in this category.
           </p>
@@ -193,7 +173,7 @@ function FlipCard({ event, navigate, category }) {
         >
           <div className="space-y-4">
             {/* Title */}
-            <h2 className={`text-lg font-semibold tracking-wide uppercase ${theme.text}`}>
+            <h2 className={`text-lg font-orbitron font-light tracking-wide uppercase ${theme.text}`}>
               {event.name}
             </h2>
 
@@ -204,13 +184,6 @@ function FlipCard({ event, navigate, category }) {
             <p className="text-sm text-gray-300 leading-relaxed line-clamp-5">
               {event.description}
             </p>
-
-            {/* Badge */}
-            <div className="flex">
-              <span className={`text-xs font-medium uppercase px-3 py-1 rounded-full border ${theme.badge}`}>
-                {event.type || "Team / Solo"}
-              </span>
-            </div>
           </div>
 
           {/* Button */}
@@ -226,53 +199,5 @@ function FlipCard({ event, navigate, category }) {
         </div>
       </div>
     </motion.div>
-  );
-}
-
-/* ===========================
-   FEATURED CARD (AI ARENA)
-=========================== */
-
-function FeaturedCard({ event, navigate, category }) {
-  return (
-    <div
-      onClick={() => navigate(`/events/${category}/${event.id}`)}
-      className="relative w-full h-[520px] group overflow-hidden rounded-3xl cursor-pointer shadow-[0_0_40px_rgba(59,130,246,0.6)] hover:shadow-[0_0_60px_rgba(59,130,246,0.8)] transition-shadow duration-500"
-    >
-      {/* Background Image with Zoom */}
-      <div className="absolute inset-0 w-full h-full transition-transform duration-700 group-hover:scale-105">
-        <img
-          src={event.poster}
-          alt={event.name}
-          className="w-full h-full object-cover"
-        />
-      </div>
-
-      {/* Cinematic Overlay */}
-      <div className="absolute inset-0 bg-black/40 group-hover:bg-black/70 transition-all duration-500" />
-
-      {/* Flagship Badge */}
-      <div className="absolute top-6 left-1/2 -translate-x-1/2 px-6 py-2 rounded-full border border-blue-400/50 bg-black/30 backdrop-blur-md text-sm md:text-lg font-bold uppercase tracking-widest text-blue-400 z-20">
-        FLAGSHIP EVENT
-      </div>
-
-      {/* Centered Title */}
-      <div className="absolute inset-0 flex flex-col items-center justify-center text-center z-10 transition-transform duration-500">
-        <h2 className="text-4xl md:text-6xl font-bold tracking-wide text-white drop-shadow-lg">
-          {event.name}
-        </h2>
-      </div>
-
-      {/* Hover Reveal Description */}
-      <div className="absolute bottom-10 left-0 right-0 flex flex-col items-center text-center opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0 z-20 px-10">
-        <p className="text-gray-300 text-sm max-w-2xl mb-4 line-clamp-2">
-          {event.description}
-        </p>
-        
-        <button className="bg-blue-600 hover:bg-blue-500 text-white px-6 py-2 rounded-lg transition-all duration-300 shadow-md hover:shadow-blue-500/40 font-medium tracking-wide">
-          View Details
-        </button>
-      </div>
-    </div>
   );
 }

@@ -1,13 +1,33 @@
+import { Link } from "react-router-dom";
+
 const Footblue = () => {
+  // smooth scroll and update hash without triggering router glitches
+  function handleNavClick(e, hash) {
+    e.preventDefault();
+    // if we're not on the home path, simply navigate there with hash
+    if (window.location.pathname !== "/") {
+      window.location.href = `/${hash}`; // triggers full navigation to root
+      return;
+    }
+
+    const id = hash.slice(1);
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" });
+    }
+    // update URL hash without reloading
+    window.history.pushState(null, "", hash);
+  }
+
   return (
-    <footer className="bg-black text-white border border-white-700">
+    <footer className="bg-black text-white border border-blue-700">
       
       {/* Terminal Top Bar */}
-      <div className="flex justify-between items-center px-6 py-3 border-b border-white-700 text-white-600 text-sm tracking-widest">
+      <div className="flex justify-between items-center px-6 py-3 border-b border-blue-700 text-blue-600 text-sm tracking-widest">
         <div className="flex space-x-2">
-          <div className="w-3 h-3 bg-white-600 rounded-full"></div>
+          <div className="w-3 h-3 bg-blue-600 rounded-full"></div>
           <div className="w-3 h-3 rounded-full bg-gradient-to-br from-pink-500 via-red-500 to-yellow-500"></div>
-          <div className="w-3 h-3 rounded-full bg-gradient-to-br from-white-400 via-yellow-500 to-purple-600"></div>
+          <div className="w-3 h-3 rounded-full bg-gradient-to-br from-blue-400 via-yellow-500 to-purple-600"></div>
         </div>
         <div>msec@Celista-2K26</div>
       </div>
@@ -17,13 +37,13 @@ const Footblue = () => {
           
           {/* LEFT */}
           <div>
-            <h1 className="text-5xl text-white-600 font-bold mb-5 leading-tight">
+            <h1 className="text-5xl text-blue-600 font-orbitron font-light mb-5 leading-tight">
               MSEC@Celista-2K26
             </h1>
 
-            <div className="space-y-2 text-gray-400">
+            <div className="space-y-2 text-gray-400 font-inter">
               <p>
-                Initializing <span className="text-white-500">blue chip</span>...
+                Initializing <span className="text-blue-500">blue chip</span>...
               </p>
               <p>
                 &gt; Loading Technical Events... <span className="text-green-500">Done.</span>
@@ -39,32 +59,24 @@ const Footblue = () => {
           <div className="grid grid-cols-1 md:grid-cols-10 gap-10">
             
             <div className="md:col-span-4">
-              <h2 className="text-white-600 mb-3 font-semibold">
+              <h2 className="text-blue-600 mb-3 font-orbitron font-light">
                 ./System_Info
               </h2>
               <div className="space-y-2 text-gray-300 text-sm">
-                <p><span className="text-white-500">SYMPOSIUM:</span> Celista 2K26</p>
-                <p><span className="text-white-500">DEPT:</span> AI & DS</p>
-                <p><span className="text-white-500">COLLEGE:</span> Meenakshi Sundararajan Engineering College</p>
-                <p><span className="text-white-500">STATUS:</span> <span className="text-green-500">● Online</span></p>
+                <p><span className="text-blue-500">SYMPOSIUM:</span> Celista 2K26</p>
+                <p><span className="text-blue-500">DEPT:</span> AI & DS</p>
+                <p><span className="text-blue-500">COLLEGE:</span> Meenakshi Sundararajan Engineering College</p>
+                <p><span className="text-blue-500">STATUS:</span> <span className="text-green-500">● Online</span></p>
               </div>
             </div>
 
             <div className="md:col-span-3">
-              <h2 className="text-white-600 mb-3 font-semibold">
-                ./Navigation
-              </h2>
-              <ul className="space-y-2 text-gray-300 text-sm">
-                <li>Home</li>
-                <li>About</li>
-                <li>Events</li>
-                <li>Location</li>
-                <li>Credits</li>
-              </ul>
+              
+              
             </div>
 
             <div className="md:col-span-3">
-              <h2 className="text-white-600 mb-3 font-semibold">
+              <h2 className="text-blue-600 mb-3 font-orbitron font-light">
                 ./Social_Handles
               </h2>
               <ul className="space-y-2 text-gray-300 text-sm">
@@ -76,7 +88,7 @@ const Footblue = () => {
         </div>
 
         {/* MAP */}
-        <div className="border border-white-700 rounded-md overflow-hidden">
+        <div className="border border-blue-700 rounded-md overflow-hidden">
           <iframe
             src="https://maps.google.com/maps?q=Meenakshi%20Sundararajan%20Engineering%20College&t=&z=15&ie=UTF8&iwloc=&output=embed"
             className="w-full h-72"

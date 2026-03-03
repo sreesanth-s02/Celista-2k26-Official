@@ -1,5 +1,4 @@
-import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 import eyes from "../assets/eyes.png";
 import circuit from "../assets/circuit.png";
@@ -46,125 +45,95 @@ const stages = [
 ];
 
 export default function Timeline() {
-  const [activeStage, setActiveStage] = useState(0);
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveStage(prev => (prev + 1) % stages.length);
-    }, 3000); // change stage every 3 seconds
-  
-    return () => clearInterval(interval);
-  }, []);
-
   return (
-    <section className="bg-black text-white px-6 md:px-20 py-14 pb-28 relative">
+    <section className="text-white px-4 md:px-20 py-24 relative font-inter overflow-hidden">
       
       {/* TITLE */}
-      <div className="text-center mb-12">
-        <h2 className="text-4xl md:text-5xl font-bold tracking-widest uppercase">
+      <div className="text-center mb-24 relative z-10">
+        <motion.h2 
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="font-orbitron text-3xl md:text-5xl font-light tracking-widest uppercase"
+        >
           THE ROAD TO <span className="text-red-600">CELista 2K26</span>
-        </h2>
-        <p className="text-gray-400 mt-4 tracking-wide">
+        </motion.h2>
+        <p className="text-gray-400 mt-4 tracking-wide text-sm md:text-base">
           Where Vision Becomes Experience.
         </p>
       </div>
 
-      {/* SPLIT LAYOUT */}
-      <div className="grid md:grid-cols-2 gap-10 items-start">
+      {/* TIMELINE CONTAINER */}
+      <div className="relative max-w-7xl mx-auto">
         
-        {/* LEFT: TIMELINE */}
-        <div className="relative">
+        {/* CENTER LINE (Desktop Only) */}
+        <motion.div 
+          initial={{ height: 0 }}
+          whileInView={{ height: "100%" }}
+          viewport={{ once: true }}
+          transition={{ duration: 1.5, ease: "easeInOut" }}
+          className="hidden md:block absolute left-1/2 -translate-x-1/2 top-0 w-[3px] bg-gradient-to-b from-red-500 via-red-400 to-red-500 shadow-[0_0_20px_rgba(255,0,0,0.6)] rounded-full z-0"
+        />
 
-            {/* Full Vertical Line */}
-            <div className="absolute left-6 md:left-1/2 md:-translate-x-1/2 top-0 bottom-0 w-[4px] bg-gradient-to-b from-red-600 via-red-500 to-red-600 shadow-[0_0_12px_rgba(255,0,0,0.5)]" />
+        <div className="space-y-12 md:space-y-24">
+            {stages.map((stage, index) => (
+                <motion.div 
+                  key={index} 
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className={`relative flex flex-col md:flex-row items-center justify-between w-full group ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}
+                >
+                  
+                  {/* CARD (45%) */}
+                  <div className="w-full md:w-[45%] relative z-10">
+                    <div className="bg-black/70 backdrop-blur-md border border-red-500/40 rounded-2xl transition-all duration-500 group-hover:shadow-[0_0_35px_rgba(255,0,0,0.7)] relative overflow-hidden min-h-[220px]">
+                      
+                      {/* Background Image Reveal */}
+                      <img 
+                          src={stage.robot} 
+                          alt="Stage Reveal" 
+                          className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-70 transition-all duration-500 z-0"
+                      />
+                      {/* Overlay */}
+                      <div className="absolute inset-0 bg-black/70 group-hover:bg-black/50 transition-colors duration-500 z-0"></div>
 
-            <div className="space-y-4 md:space-y-6">
-                {stages.map((stage, index) => {
-                const isActive = activeStage === index;
-                const isLeft = index % 2 === 0;
-
-                return (
-                    <div key={index} className="relative flex items-start md:items-center justify-start md:justify-center">
-
-                    {/* Node */}
-                    <button
-                        onClick={() => {
-                            setActiveStage(index);
-                          }}
-                          className={`absolute left-6 md:left-1/2 md:-translate-x-1/2 w-4 h-4 border-2 transition-all duration-300 z-10
-                            ${isActive 
-                              ? "bg-red-600 border-red-400 shadow-[0_0_15px_rgba(255,0,0,0.9)] scale-125"
-                              : "bg-black border-red-600"}`}
-                    />
-
-                    {/* Card */}
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5 }}
-                        className={`
-                            w-full md:w-[36%]
-                            ${isActive 
-                                ? "border-2 border-red-500 shadow-[0_0_25px_rgba(255,0,0,0.6)]"
-                                : "border border-red-600"}
-                            px-6 py-5
-                            bg-black
-                            flex flex-col justify-center
-                            text-left
-                            ${isLeft 
-                                ? "md:mr-auto md:text-right md:items-end md:pr-12" 
-                                : "md:ml-auto md:text-left md:items-start md:pl-12"}
-                          `}
-                    >
-                        <h3 className={`text-sm md:text-base font-semibold uppercase tracking-wider mb-2
-                            ${isActive ? "text-red-500" : "text-white"}`}>
-                            {stage.title}
-                        </h3>
-
-                        <p className="text-gray-400 text-sm leading-relaxed">
+                      {/* Content */}
+                      <div className="relative z-10 flex flex-col justify-center h-full p-8">
+                        <div className="flex justify-between items-start mb-4 w-full">
+                            <h3 className="font-orbitron text-2xl text-red-500 font-light tracking-wide text-left">
+                                {stage.title}
+                            </h3>
+                            <span className="text-xs font-mono text-red-400 border border-red-500/30 px-2 py-1 rounded bg-black/50 flex-shrink-0">
+                                {stage.date}
+                            </span>
+                        </div>
+                        
+                        <p className="text-gray-300 text-sm md:text-base leading-relaxed mb-6 text-left w-full">
                             {stage.subtitle}
                         </p>
 
-                        <p className="text-gray-500 text-xs tracking-widest mt-3 opacity-70">
-                            {stage.date}
-                        </p>
-                    </motion.div>
+                        <div className="text-red-500/70 font-mono text-xs tracking-widest border-t border-red-500/20 pt-4 text-left w-full">
+                            &gt; {stage.terminal}
+                        </div>
+                      </div>
 
                     </div>
-                );
-                })}
-            </div>
-            </div>
+                  </div>
 
-        {/* RIGHT: ROBOT DISPLAY */}
-        <div className="relative border border-red-600 p-6 bg-black min-h-[420px] flex flex-col justify-center items-center max-h-[380px]">
-          
-          {/* Subtle Red Energy Glow */}
-          <div className="absolute inset-0 bg-red-600 opacity-[0.04] blur-3xl pointer-events-none" />
+                  {/* CENTER NODE (Desktop Only) */}
+                  <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 items-center justify-center z-20">
+                    <div className="w-6 h-6 rounded-full bg-red-500 shadow-[0_0_20px_rgba(255,0,0,0.8)] transition-transform duration-500 group-hover:scale-125"></div>
+                    {/* Pulse */}
+                    <div className="absolute w-full h-full rounded-full bg-red-500 animate-ping opacity-50"></div>
+                  </div>
 
-          <AnimatePresence mode="wait">
-            <motion.img
-              key={activeStage}
-              src={stages[activeStage].robot}
-              alt="Robot Stage"
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.5 }}
-              className="max-h-[350px] object-contain relative z-10"
-            />
-          </AnimatePresence>
+                  {/* SPACER (45%) */}
+                  <div className="hidden md:block w-[45%]" />
 
-          {/* TERMINAL MICRO TEXT */}
-          <motion.div
-            key={stages[activeStage].terminal}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.3 }}
-            className="text-xs text-red-500 font-mono mt-8 opacity-70 tracking-wider"
-          >
-            &gt; {stages[activeStage].terminal}
-          </motion.div>
-
+                </motion.div>
+            ))}
         </div>
       </div>
     </section>

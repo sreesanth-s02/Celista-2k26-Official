@@ -1,4 +1,18 @@
+import { Link } from "react-router-dom";
+
 const Footer = () => {
+  function handleNavClick(e, hash) {
+    e.preventDefault();
+    if (window.location.pathname !== "/") {
+      window.location.href = `/${hash}`;
+      return;
+    }
+    const id = hash.slice(1);
+    const el = document.getElementById(id);
+    if (el) el.scrollIntoView({ behavior: "smooth" });
+    window.history.pushState(null, "", hash);
+  }
+
   return (
     <footer className="bg-black text-white border border-red-700">
       
@@ -17,11 +31,11 @@ const Footer = () => {
           
           {/* LEFT */}
           <div>
-            <h1 className="text-5xl text-red-600 font-bold mb-5 leading-tight">
+          <h1 className="text-3xl md:text-5xl text-red-600 font-orbitron font-light mb-5 leading-tight break-all">
               MSEC@Celista-2K26
             </h1>
 
-            <div className="space-y-2 text-gray-400">
+            <div className="space-y-2 text-gray-400 font-inter">
               <p>
                 Initializing <span className="text-red-500">red chip</span>...
               </p>
@@ -39,7 +53,7 @@ const Footer = () => {
           <div className="grid grid-cols-1 md:grid-cols-10 gap-10">
             
             <div className="md:col-span-4">
-              <h2 className="text-red-600 mb-3 font-semibold">
+              <h2 className="text-red-600 mb-3 font-orbitron font-light">
                 ./System_Info
               </h2>
               <div className="space-y-2 text-gray-300 text-sm">
@@ -51,25 +65,15 @@ const Footer = () => {
             </div>
 
             <div className="md:col-span-3">
-              <h2 className="text-red-600 mb-3 font-semibold">
-                ./Navigation
-              </h2>
-              <ul className="space-y-2 text-gray-300 text-sm">
-                <li>Home</li>
-                <li>About</li>
-                <li>Events</li>
-                <li>Location</li>
-                <li>Credits</li>
-              </ul>
             </div>
 
             <div className="md:col-span-3">
-              <h2 className="text-red-600 mb-3 font-semibold">
+              <h2 className="text-red-600 mb-3 font-orbitron font-light">
                 ./Social_Handles
               </h2>
               <ul className="space-y-2 text-gray-300 text-sm">
                 <li>@ Instagram</li>
-                <li>@ YouTube</li>
+                <li>@ Gmail</li>
               </ul>
             </div>
           </div>

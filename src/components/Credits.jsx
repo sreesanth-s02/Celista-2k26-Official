@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
+import { ArrowLeft } from "lucide-react";
 
 const creditsData = [
   {
@@ -47,16 +49,16 @@ const creditsData = [
   {
     role: "EVENT CO-COORDINATORS",
     names: [
-      "XXX",
-      "XXX",
-      "XXX",
-      "XXX",
-      "XXX",
-      "XXX",
-      "XXX",
-      "XXX",
-      "XXX",
-      "XXX"
+      "Krithika",
+      "Price",
+      "Jayanth",
+      "Preethi",
+      "Dhilothi",
+      "Rithika V",
+      "Kanishka R",
+      "Rahul",
+      "Naaneshwari",
+      "Akshaya G"
     ]
   },
   {
@@ -78,6 +80,7 @@ const creditsData = [
 
 export default function Credits() {
   const [index, setIndex] = useState(0);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -90,78 +93,83 @@ export default function Credits() {
   const active = creditsData[index];
 
   return (
-    <section className="relative min-h-screen text-white overflow-hidden flex items-center px-6 md:px-20 py-16">
-      <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(circle_at_1px_1px,#ff0000_1px,transparent_0)] bg-[length:22px_22px]" />
+    <section className="relative min-h-screen text-white overflow-hidden flex flex-col justify-center px-6 md:px-20 py-16">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-[0.05] bg-[radial-gradient(circle_at_1px_1px,#ff0000_1px,transparent_0)] bg-[length:32px_32px]" />
 
-      <div className="relative z-10 w-full">
+      {/* Back Button */}
+      <motion.button
+        onClick={() => navigate("/")}
+        className="absolute top-8 left-6 md:left-12 flex items-center gap-2 text-red-500 hover:text-red-400 transition-colors z-50 group"
+        initial={{ opacity: 0, x: -20 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.5 }}
+      >
+        <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
+        <span className="text-sm font-mono tracking-widest uppercase">Back to Home</span>
+      </motion.button>
+
+      <div className="relative z-10 w-full max-w-7xl mx-auto">
         {/* DESKTOP LAYOUT */}
-        <div className="hidden md:grid md:grid-cols-[1fr_auto_1fr] gap-16 items-center">
+        <div className="hidden md:grid md:grid-cols-2 gap-12 lg:gap-24 items-center">
           
           {/* LEFT SECTION */}
-          <div className="flex flex-col justify-center items-center text-center space-y-6">
-            <h1 className="text-5xl md:text-6xl font-bold uppercase leading-tight tracking-wide text-center">
-              <span className="text-white whitespace-nowrap">
+          <div className="flex flex-col justify-center text-left space-y-8">
+            <div className="space-y-2">
+              <h1 className="text-5xl lg:text-6xl font-orbitron font-light text-white tracking-tight">
                 THE FORCE BEHIND
-              </span>
-              <br />
-              <span className="text-red-600">
+              </h1>
+              <h1 className="text-6xl lg:text-7xl font-orbitron font-light text-red-600 tracking-tighter drop-shadow-lg">
                 CELISTA 2K26
-               </span>
-            </h1>
+              </h1>
+            </div>
 
-            <p className="text-lg text-gray-400">
-              Built by Vision. Powered by Passion.
+            <p className="text-gray-400 text-lg tracking-wide max-w-md border-l-2 border-red-600/50 pl-6">
+              Built by Vision. Powered by Passion.<br />
+              Meet the minds engineering the future.
             </p>
           </div>
 
-          {/* CENTER DIVIDER */}
-          <div className="w-[1px] h-[420px] bg-red-600 opacity-70" />
-
-          {/* RIGHT SECTION */}
-          <div className="flex flex-col items-center justify-center">
-            <div className="relative w-full max-w-2xl border border-red-600 bg-black/90 backdrop-blur-sm px-12 py-8">
+          {/* RIGHT SECTION (Card) */}
+          <div className="flex flex-col items-center justify-center w-full">
+            <div className="relative w-full max-w-xl min-h-[450px] border border-red-500/40 bg-black/70 backdrop-blur-md rounded-2xl shadow-[0_0_20px_rgba(255,0,0,0.25)] p-10 flex flex-col justify-center">
               
               <AnimatePresence mode="wait">
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, x: 40 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: -40 }}
-                  transition={{ duration: 0.5 }}
-                  className="flex flex-col"
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -10 }}
+                  transition={{ duration: 0.4, ease: "easeOut" }}
+                  className="flex flex-col h-full"
                 >
                   {/* Terminal header */}
-                  <div className="text-xs text-red-500 font-mono space-y-1 opacity-60 mb-6">
-                    <p>&gt; Initializing...</p>
-                    <p>&gt; Rendering profile...</p>
-                    <p>&gt; Access granted.</p>
+                  <div className="text-xs text-red-400/70 font-mono tracking-wide space-y-1 mb-8">
+                    <p>&gt; Initializing protocol...</p>
+                    <p>&gt; Loading profile data...</p>
+                    <p>&gt; <span className="text-green-500">Access granted.</span></p>
                   </div>
 
                   {/* Role */}
-                  <p className="text-2xl tracking-[4px] text-red-600 uppercase text-center border-b border-red-600 pb-4 mb-10">
+                  <h2 className="text-xl uppercase tracking-[0.3em] text-red-500 font-orbitron font-light border-b border-red-500/40 pb-4 mb-8 text-center">
                     {active.role}
-                  </p>
+                  </h2>
 
                   {/* Names List */}
-                  <div className="flex flex-col items-center space-y-4">
+                  <div className="flex flex-col items-center space-y-4 flex-grow justify-center">
                     {active.names.map((person, i) => (
                       <p
                         key={i}
                         className="
-                          text-xl
-                          md:text-2xl
-                          text-white
-                          font-light
+                          text-lg
+                          text-gray-200
+                          font-medium
                           tracking-wide
                           text-center
-                          leading-snug
-                          transition-all
+                          transition-colors
                           duration-300
-                          ease-out
-                          hover:text-red-500
-                          hover:drop-shadow-[0_0_10px_rgba(255,0,0,0.5)]
-                          hover:scale-105
-                          cursor-pointer
+                          hover:text-red-400
+                          cursor-default
                         "
                       >
                         {person}
@@ -170,78 +178,61 @@ export default function Credits() {
                   </div>
 
                   {/* Footer */}
-                  <div className="text-xs text-gray-500 tracking-wide mt-10">
-                    Powering CELISTA 2K26
+                  <div className="text-[10px] text-gray-600 tracking-widest uppercase text-center mt-8 font-mono">
+                    // System_ID: {index + 1} / {creditsData.length}
                   </div>
                 </motion.div>
               </AnimatePresence>
-            </div>
-
-            {/* Dots */}
-            <div className="flex space-x-3 mt-8">
-              {creditsData.map((_, i) => (
-                <button
-                  key={i}
-                  onClick={() => setIndex(i)}
-                  className={`w-3 h-3 border border-red-600 transition-all duration-300 ${
-                    i === index
-                      ? "bg-red-600 shadow-[0_0_8px_rgba(255,0,0,0.7)] scale-110"
-                      : "hover:bg-red-600/40"
-                  }`}
-                />
-              ))}
             </div>
           </div>
         </div>
 
         {/* MOBILE LAYOUT */}
-        <div className="md:hidden flex flex-col gap-12">
-          <div className="text-center">
-            <h1 className="text-3xl font-bold uppercase leading-tight tracking-wide">
-              <span className="text-white">THE FORCE BEHIND</span>
-              <br />
-              <span className="text-red-600">CELISTA 2K26</span>
+        <div className="md:hidden flex flex-col gap-10 mt-12">
+          <div className="text-center space-y-4">
+            <h1 className="text-4xl font-orbitron font-light text-white leading-tight">
+              THE FORCE BEHIND
             </h1>
-
-            <p className="text-gray-400 mt-4 text-center">
+            <h1 className="text-5xl font-orbitron font-light text-red-600 leading-none">
+              CELISTA 2K26
+            </h1>
+            <p className="text-gray-400 text-sm tracking-wide mt-2">
               Built by Vision. Powered by Passion.
             </p>
           </div>
 
-          <div className="w-full border border-red-600 bg-black/80 backdrop-blur-sm p-6 min-h-[420px]">
+          <div className="w-full border border-red-500/40 bg-black/70 backdrop-blur-md rounded-2xl shadow-[0_0_20px_rgba(255,0,0,0.25)] p-6 min-h-[400px] flex flex-col">
             <AnimatePresence mode="wait">
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -20 }}
-                transition={{ duration: 0.5 }}
+                transition={{ duration: 0.4 }}
                 className="flex flex-col h-full"
               >
-                <div className="text-xs text-red-500 font-mono space-y-1 opacity-60 mb-4">
-                  <p>&gt; Initializing...</p>
-                  <p>&gt; Rendering profile...</p>
-                  <p>&gt; Access granted.</p>
+                <div className="text-xs text-red-400/70 font-mono tracking-wide space-y-1 mb-6">
+                  <p>&gt; System ready.</p>
                 </div>
 
-                <p className="text-xs tracking-widest text-red-600 uppercase border-b border-red-600 pb-2 mb-6 text-center">
+                <h2 className="text-lg uppercase tracking-[0.2em] text-red-500 font-orbitron font-light border-b border-red-500/40 pb-3 mb-6 text-center">
                   {active.role}
-                </p>
+                </h2>
 
-                <div className="flex-1 overflow-y-auto space-y-4 text-center">
+                <div className="flex-1 flex flex-col items-center justify-center space-y-3">
                   {active.names.map((person, i) => (
                     <p
                       key={i}
-                      className="text-lg text-white transition-all duration-300 hover:text-red-500"
+                      className="text-base text-gray-200 font-medium hover:text-red-400 transition-colors"
                     >
                       {person}
                     </p>
                   ))}
                 </div>
 
-                <div className="text-xs text-gray-500 mt-4">
-                  Powering CELISTA 2K26
-                </div>
+                 <div className="text-[10px] text-gray-600 tracking-widest uppercase text-center mt-6 font-mono">
+                    // {index + 1} / {creditsData.length}
+                  </div>
               </motion.div>
             </AnimatePresence>
           </div>

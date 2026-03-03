@@ -22,11 +22,7 @@ function Footer() {
           </h4>
 
           <ul className="space-y-4 text-gray-400">
-            <li>
-              <a href="#home" className="hover:text-primary transition">
-                Home
-              </a>
-            </li>
+            
             <li>
               <a href="#about" className="hover:text-primary transition">
                 About

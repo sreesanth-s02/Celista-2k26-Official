@@ -40,7 +40,7 @@ export default function EventDetail() {
   }
 
   return (
-    <div className="min-h-screen bg-black text-white font-inter overflow-auto">
+    <div className="min-h-screen text-white font-inter overflow-auto">
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-16">
 
         {/* BACK BUTTON */}
@@ -108,7 +108,7 @@ export default function EventDetail() {
                 }}
               >
                 <h3
-                  className={`text-2xl font-semibold tracking-widest uppercase font-orbitron text-center ${theme.text}`}
+                  className={`text-2xl font-light tracking-widest uppercase font-orbitron text-center ${theme.text}`}
                 >
                   EVENT INFO
                 </h3>
@@ -119,17 +119,17 @@ export default function EventDetail() {
 
                 <hr className="border-gray-700" />
 
-                <h4 className={`${theme.text} font-semibold tracking-widest uppercase font-orbitron text-lg`}>
+                <h4 className={`${theme.text} font-light tracking-widest uppercase font-orbitron text-lg`}>
                   STUDENT COORDINATORS
                 </h4>
 
-                <p className="text-base">{event.coordinator1} - {event.contact1}</p>
-                <p className="text-base">{event.coordinator2} - {event.contact2}</p>
+                <p className="text-base font-inter">{event.coordinator1} - {event.contact1}</p>
+                <p className="text-base font-inter">{event.coordinator2} - {event.contact2}</p>
 
-                <h4 className={`${theme.text} font-semibold tracking-widest uppercase font-orbitron text-lg mt-6`}>
+                <h4 className={`${theme.text} font-light tracking-widest uppercase font-orbitron text-lg mt-6`}>
                   STAFF COORDINATORS
                 </h4>
-                <p className="text-base">{event.staffCoordinator}</p>
+                <p className="text-base font-inter">{event.staffCoordinator}</p>
 
                 <motion.a
                   href={event.registrationLink}
@@ -212,13 +212,13 @@ function MagneticBanner({ event, theme }) {
       {/* Content */}
       <div className="relative z-10 px-6 sm:px-10">
         <span
-          className={`inline-block text-xs px-3 py-1 rounded mb-4 uppercase tracking-wider ${theme.badgeBg} text-white`}
+          className={`inline-block text-xs px-3 py-1 rounded mb-4 uppercase tracking-wider ${theme.badgeBg} text-white font-orbitron font-light`}
         >
           {event.category}
         </span>
 
         <h1
-          className="text-3xl sm:text-4xl font-bold font-orbitron text-white"
+          className="text-3xl sm:text-4xl font-orbitron font-light text-white"
           style={{
             textShadow: `0 0 20px ${theme.shadowHex}`,
           }}
@@ -235,10 +235,10 @@ function MagneticBanner({ event, theme }) {
 function Section({ title, children, theme }) {
   return (
     <section>
-      <h2 className={`text-2xl font-semibold tracking-widest uppercase font-orbitron ${theme.text} border-b ${theme.border} pb-2`}>
+      <h2 className={`text-2xl font-orbitron font-light tracking-widest uppercase ${theme.text} border-b ${theme.border} pb-2`}>
         {title}
       </h2>
-      <p className="text-gray-300 text-base leading-relaxed mt-4">{children}</p>
+      <p className="text-gray-300 text-base leading-relaxed mt-4 font-inter">{children}</p>
     </section>
   );
 }
@@ -246,7 +246,7 @@ function Section({ title, children, theme }) {
 function ListSection({ title, icon, items, theme }) {
   return (
     <section>
-      <h2 className={`text-2xl font-semibold tracking-widest uppercase font-orbitron ${theme.text} border-b ${theme.border} pb-2 flex items-center gap-3`}>
+      <h2 className={`text-2xl font-orbitron font-light tracking-widest uppercase ${theme.text} border-b ${theme.border} pb-2 flex items-center gap-3`}>
         {icon}
         {title}
       </h2>

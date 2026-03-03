@@ -23,7 +23,11 @@ function App() {
   const [scrollY, setScrollY] = useState(0);
   const location = useLocation(); // ✅ required for route detection
 
-  const isMemoriesPage = location.pathname === "/memories";
+  const hideRoutes = ["/memories", "/credits"];
+
+const shouldHideNavbar =
+  hideRoutes.includes(location.pathname) ||
+  location.pathname.startsWith("/events");
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
@@ -46,7 +50,7 @@ function App() {
         <CustomCursor />
 
         {/* Hide Navbar only on Memories page */}
-        {!isMemoriesPage && <Navbar />}
+        {!shouldHideNavbar && <Navbar />}
 
         <Routes>
           <Route
@@ -60,6 +64,8 @@ function App() {
                 <EventModeSelection />
                 <Location />
                 <Sponsors />
+        
+
 
                 {/* PEOPLE BEHIND SECTION */}
                 <section className="relative py-24 text-white text-center overflow-hidden">

@@ -27,6 +27,11 @@ export default {
   				DEFAULT: 'hsl(var(--primary))',
   				foreground: 'hsl(var(--primary-foreground))'
   			},
+			extend: {
+    fontFamily: {
+      orbitron: ['Orbitron', 'sans-serif'],
+    },
+  },
   			secondary: {
   				DEFAULT: 'hsl(var(--secondary))',
   				foreground: 'hsl(var(--secondary-foreground))'

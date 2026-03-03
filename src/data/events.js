@@ -68,10 +68,40 @@ Round 2 (Comic Creation): A theme is given on the spot. Teams create a comic usi
     id: "AI Arena",
     name: "AI Arena",
     category: "technical",
-    description: "Competitive coding event.",
-    fullDescription: "Solve algorithmic challenges in a competitive environment...",
-    prerequisites: ["Basic Programming", "Laptop Required"],
-    rules: ["Team size: 3 members", "No plagiarism"],
+    description: `AI Arena is a high-intensity, tournament-style Artificial Intelligence competition designed to challenge innovation, technical expertise, and strategic thinking.
+
+From prompt engineering to real-time model optimization, teams will battle through progressive AI challenges that test their ability to think fast, build smart, and perform under pressure.
+
+Only the most adaptive and technically sharp teams will dominate the Arena.`,
+    fullDescription: `🔹 Round 1 – Prompt Engineering Battle
+
+Teams leverage AI tools to craft precise, creative, and high-impact prompts to generate optimized outputs.
+
+🔹 Round 2 – Dataset Debug Challenge
+
+Participants identify and fix broken ML code, clean messy datasets, and enhance model performance.
+
+🔹 Round 3 – Model Accuracy Showdown
+
+Teams build and fine-tune machine learning models on a new dataset to achieve the highest accuracy.
+
+🏆 Finals – Live AI Challenge
+
+Top-performing teams face a real-time AI problem-solving round with live leaderboard updates to determine the ultimate champions.`,
+    prerequisites: [
+  "Basic knowledge of Machine Learning and Artificial Intelligence",
+  "Familiarity with Python and ML libraries (e.g., NumPy, Pandas, Scikit-learn)",
+  "Understanding of model training, evaluation, and optimization",
+  "Strong problem-solving and teamwork skills"
+],
+    rules: [
+  "Team size: 2–3 members",
+  "All participants must carry a valid College ID card",
+  "Teams must strictly follow time limits for each round",
+  "Internet access allowed only as specified by organizers",
+  "Any form of malpractice will lead to immediate disqualification",
+  "Judges’ decision will be final"
+],
     venue: "AI&DS Lab 1,2",
     poster:"/posters/AI_Arena.png",
     registrationLink: "https://forms.gle/XoQQyxssr3GbRNdE6",
@@ -311,7 +341,7 @@ Qualified teams enter a two-room escape challenge where one teammate is trapped 
     id: "Minute to Win It",
     name: "Minute to Win It",
     category: "non-technical",
-    description: "Min To Win It 3.0 is a fast-paced challenge where participants must complete time-based tasks under pressure, testing speed, focus, and quick decision-making.",
+    description: "Min To Win It 4.0 is a fast-paced challenge where participants must complete time-based tasks under pressure, testing speed, focus, and quick decision-making.",
     fullDescription: "Participants must complete each task within the given time limit, with instructions revealed only at the start of each round. Each team gets only one attempt per task, and all materials will be provided. Teams can attempt up to 8 tasks out of 12, and successfully completing 6 tasks secures victory. Winners are decided based on speed and task completion.",
     prerequisites: [
   "Quick reflexes and presence of mind",
@@ -326,7 +356,7 @@ Qualified teams enter a two-room escape challenge where one teammate is trapped 
   "Winners are decided based on speed and successful task completion"
 ],
     venue: "Mechanical Block T-2,T-3",
-    poster:"/posters/minute_to_win.jpg",
+    poster:"/posters/minute_to_win.png",
     registrationLink: "https://forms.gle/ip1EeTgZSgWzenNb7",
     date: "17-03-2026",
     time: "09:00 AM",

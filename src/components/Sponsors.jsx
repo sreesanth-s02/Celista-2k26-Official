@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import "./Sponsors.css";
 
-import sponsor1 from "../assets/sponsors/sponsor1.png";
+import sponsor1 from "../assets/sponsors/sponsor1.PNG";
 import sponsor2 from "../assets/sponsors/sponsor2.png";
 
 const Sponsors = () => {

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
+import Preloader from "./components/Preloader";
 
 import Navbar from "./components/Navbar";
 import Hero from "./pages/Hero";
@@ -20,14 +21,27 @@ import Timeline from "./components/Timeline";
 import Memories from "./pages/Memories";
 
 function App() {
+
+  /* ---------------- PRELOADER ---------------- */
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2500); // loader time
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  /* ---------------- SCROLL ---------------- */
   const [scrollY, setScrollY] = useState(0);
-  const location = useLocation(); // ✅ required for route detection
+  const location = useLocation();
 
   const hideRoutes = ["/memories", "/credits"];
 
-const shouldHideNavbar =
-  hideRoutes.includes(location.pathname) ||
-  location.pathname.startsWith("/events");
+  const shouldHideNavbar =
+    hideRoutes.includes(location.pathname) ||
+    location.pathname.startsWith("/events");
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
@@ -37,6 +51,11 @@ const shouldHideNavbar =
 
   const dockTimer = scrollY > 400;
   const hideSmoke = scrollY < window.innerHeight;
+
+  /* ---------------- SHOW PRELOADER ---------------- */
+  if (loading) {
+    return <Preloader />;
+  }
 
   return (
     <>
@@ -49,7 +68,6 @@ const shouldHideNavbar =
       <div className="main-content">
         <CustomCursor />
 
-        {/* Hide Navbar only on Memories page */}
         {!shouldHideNavbar && <Navbar />}
 
         <Routes>
@@ -64,8 +82,6 @@ const shouldHideNavbar =
                 <EventModeSelection />
                 <Location />
                 <Sponsors />
-        
-
 
                 {/* PEOPLE BEHIND SECTION */}
                 <section className="relative py-24 text-white text-center overflow-hidden">
@@ -104,15 +120,14 @@ const shouldHideNavbar =
           />
 
           <Route path="/events/:category" element={<EventsList />} />
+
           <Route
             path="/events/:category/:eventId"
             element={<EventDetail />}
           />
 
-          {/* Memories Page */}
           <Route path="/memories" element={<Memories />} />
 
-          {/* Credits Page */}
           <Route path="/credits" element={<Credits />} />
         </Routes>
       </div>

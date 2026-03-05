@@ -123,24 +123,36 @@ export default function EventDetail() {
                   STUDENT COORDINATORS
                 </h4>
 
-                <p className="text-base font-inter">{event.coordinator1} - {event.contact1}</p>
-                <p className="text-base font-inter">{event.coordinator2} - {event.contact2}</p>
+                <p className="text-base font-inter">{event.coordinator1}</p>
+                <p className="text-base font-inter">{event.coordinator2}</p>
+
+                <h4 className={`${theme.text} font-light tracking-widest uppercase font-orbitron text-lg mt-6`}>
+                  CONTACT DETAILS
+                </h4>
+                <p className="text-base font-inter">{event.contact1}</p>
+                <p className="text-base font-inter">{event.contact2}</p>
 
                 <h4 className={`${theme.text} font-light tracking-widest uppercase font-orbitron text-lg mt-6`}>
                   STAFF COORDINATORS
                 </h4>
                 <p className="text-base font-inter">{event.staffCoordinator}</p>
 
-                <motion.a
-                  href={event.registrationLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`block w-full py-4 text-center font-bold rounded-xl text-white bg-gradient-to-r ${theme.buttonGradient} transition-all duration-300 ${theme.buttonHover} ${theme.buttonShadow}`}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.98 }}
-                >
-                  REGISTER NOW
-                </motion.a>
+                {event.registrationLink === "Open Registration" ? (
+                  <div className="block w-full py-4 text-center font-bold rounded-xl text-white border border-white/20 cursor-default tracking-widest">
+                    OPEN REGISTRATION
+                  </div>
+                ) : (
+                  <motion.a
+                    href={event.registrationLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`block w-full py-4 text-center font-bold rounded-xl text-white bg-gradient-to-r ${theme.buttonGradient} transition-all duration-300 ${theme.buttonHover} ${theme.buttonShadow}`}
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.98 }}
+                  >
+                    REGISTER NOW
+                  </motion.a>
+                )}
               </div>
             </motion.div>
           </div>

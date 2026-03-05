@@ -63,7 +63,7 @@ function Footer() {
           </p>
 
           <a
-            href="https://instagram.com/celista2k26"
+            href="https://www.instagram.com/celista.2k26?igsh=MWQwanBtZ2tmdG93MQ=="
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block text-gray-400 hover:text-primary transition"

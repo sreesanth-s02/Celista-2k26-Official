@@ -122,6 +122,7 @@ body {
 
 .about-section {
   position: relative;
+  justify-content: center;
   padding: 120px 8%;
   background: transparent;
   display: flex;
@@ -173,6 +174,8 @@ body {
   max-width: 650px;
   position: relative;
   z-index: 2;
+  text-align: justify;
+
 }
 
 /* ================= MOBILE ================= */

@@ -16,7 +16,7 @@ function Location() {
           transition={{ duration: 0.6 }}
           className="font-orbitron text-4xl md:text-5xl text-white tracking-widest text-center mb-20"
         >
-          EVENT <span className="text-primary">LOCATION</span>
+          LOCATION
         </motion.h2>
 
         {/* Content */}
@@ -58,14 +58,14 @@ function Location() {
             className="border border-white/10 overflow-hidden"
           >
             <iframe
-              title="Event Location"
-              src="https://www.google.com/maps?q=Meenakshi%20Sundararajan%20Engineering%20College&output=embed"
+              title="Find Us on Google Maps"
+              src="https://maps.google.com/maps?q=Meenakshi%20Sundararajan%20Engineering%20College&t=&z=15&ie=UTF8&iwloc=&output=embed"
               width="100%"
               height="360"
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              className="grayscale opacity-90"
+              className=" opacity-90"
               background="transparent"
           
             />

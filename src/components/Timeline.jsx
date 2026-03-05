@@ -9,36 +9,36 @@ import logo from "../assets/logo.png";
 const stages = [
   {
     title: "Official Announcement",
-    subtitle: "📢 Symposium Reveal",
-    date: "TBA",
+    subtitle: " Symposium Reveal",
+    date: "19/02/2025",
     robot: eyes,
     terminal: "Initializing optical system..."
   },
   {
     title: "Website Launch",
-    subtitle: "🌐 Public Portal Activated",
-    date: "TBA",
+    subtitle: " Public Portal Activated",
+    date: "05/03/2026",
     robot: circuit,
     terminal: "Booting circuit framework..."
   },
   {
     title: "Registration Opens",
-    subtitle: "📝 Participant Enrollment Begins",
-    date: "TBA",
+    subtitle: " Participant Enrollment Begins",
+    date: "05/03/2026",
     robot: core,
     terminal: "Core module installed..."
   },
   {
     title: "Early Bird Deadline",
-    subtitle: "⏳ Priority Access Closed",
-    date: "TBA",
+    subtitle: "Priority Access Closed",
+    date: "16/03/2026",
     robot: preparation,
     terminal: "Preparation sequence engaged..."
   },
   {
     title: "Symposium Day",
-    subtitle: "🚀 Events Begin",
-    date: "2K26",
+    subtitle: " Events Begin",
+    date: "17/03/2026",
     robot: logo,
     terminal: "System fully activated."
   }
@@ -56,7 +56,7 @@ export default function Timeline() {
           viewport={{ once: true }}
           className="font-orbitron text-3xl md:text-5xl font-light tracking-widest uppercase"
         >
-          THE ROAD TO <span className="text-red-600">CELista 2K26</span>
+          THE ROAD TO <span className="text-red-600">CELISTA 2K26</span>
         </motion.h2>
         <p className="text-gray-400 mt-4 tracking-wide text-sm md:text-base">
           Where Vision Becomes Experience.

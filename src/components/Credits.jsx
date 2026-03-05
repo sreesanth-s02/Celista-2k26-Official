@@ -24,12 +24,12 @@ const creditsData = [
     ]
   },
   {
-    role: "DESIGN",
-    names: ["XXX", "XXX", "XXX"]
+    role: "DESIGN & MAGANIZE",
+    names: ["Aathika Nisha", "Aishwarya", "Anees Fathima", "Mridhunitha","Darshan",]
   },
   {
     role: "EDITING",
-    names: ["XXX", "XXX", "XXX"]
+    names: ["Rohith", "Samuel", "Kishore S"]
   },
   {
     role: "EVENT COORDINATORS",
@@ -50,10 +50,10 @@ const creditsData = [
     role: "EVENT CO-COORDINATORS",
     names: [
       "Krithika",
-      "Price",
+      "Prince",
       "Jayanth",
-      "Preethi",
-      "Dhilothi",
+      "Preethi Y",
+      "Dhilothi B",
       "Rithika V",
       "Kanishka R",
       "Rahul",
@@ -78,19 +78,33 @@ const creditsData = [
   }
 ];
 
+const processedCredits = creditsData.flatMap((item) => {
+  if (item.names.length > 5) {
+    const chunks = [];
+    for (let i = 0; i < item.names.length; i += 5) {
+      chunks.push({
+        role: item.role,
+        names: item.names.slice(i, i + 5)
+      });
+    }
+    return chunks;
+  }
+  return item;
+});
+
 export default function Credits() {
   const [index, setIndex] = useState(0);
   const navigate = useNavigate();
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setIndex((prev) => (prev + 1) % creditsData.length);
+      setIndex((prev) => (prev + 1) % processedCredits.length);
     }, 4000);
 
     return () => clearInterval(interval);
   }, []);
 
-  const active = creditsData[index];
+  const active = processedCredits[index];
 
   return (
     <section className="relative min-h-screen text-white overflow-hidden flex flex-col justify-center px-6 md:px-20 py-16">
@@ -179,7 +193,7 @@ export default function Credits() {
 
                   {/* Footer */}
                   <div className="text-[10px] text-gray-600 tracking-widest uppercase text-center mt-8 font-mono">
-                    // System_ID: {index + 1} / {creditsData.length}
+                    // System_ID: {index + 1} / {processedCredits.length}
                   </div>
                 </motion.div>
               </AnimatePresence>
@@ -231,7 +245,7 @@ export default function Credits() {
                 </div>
 
                  <div className="text-[10px] text-gray-600 tracking-widest uppercase text-center mt-6 font-mono">
-                    // {index + 1} / {creditsData.length}
+                    // {index + 1} / {processedCredits.length}
                   </div>
               </motion.div>
             </AnimatePresence>

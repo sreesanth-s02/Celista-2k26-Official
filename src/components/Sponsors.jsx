@@ -1,9 +1,8 @@
 import React, { useEffect, useRef } from "react";
 import "./Sponsors.css";
 
-import simpligo from "../assets/sponsors/simpligo.png";
-import darkhorse from "../assets/sponsors/darkhorse.png";
-import core from "../assets/sponsors/core.png";
+import sponsor1 from "../assets/sponsors/sponsor1.PNG";
+import sponsor2 from "../assets/sponsors/sponsor2.PNG";
 
 const Sponsors = () => {
   const cardsRef = useRef([]);
@@ -45,32 +44,12 @@ const Sponsors = () => {
           >
             <div className="card-inner">
               <div className="card-front">
-                <img src={simpligo} alt="SimpliGO" />
+                <img src={sponsor1} alt="Goutham Jewllery" style={{width: "100%", height: "100%", objectFit: "contain", borderRadius: "20px"}} />
               </div>
               <div className="card-back">
-                <h4>SimpliGO</h4>
+                <h4>Goutham Jewllery</h4>
                 <p>
-                  Smart mobility solutions<br />
-                  Powering digital transport innovation.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Sponsor 2 */}
-          <div
-            className="sponsor-card"
-            ref={(el) => (cardsRef.current[1] = el)}
-          >
-            <div className="card-inner">
-              <div className="card-front">
-                <img src={darkhorse} alt="Dark Horse Works" />
-              </div>
-              <div className="card-back">
-                <h4>Dark Horse Works</h4>
-                <p>
-                  Creative tech innovators<br />
-                  Driving digital transformation.
+                  Goutham Jewellery, Kodambakkam offers quality gold, silver jewellery with elegant designs for every occasion.
                 </p>
               </div>
             </div>
@@ -79,17 +58,16 @@ const Sponsors = () => {
           {/* Sponsor 3 */}
           <div
             className="sponsor-card"
-            ref={(el) => (cardsRef.current[2] = el)}
+            ref={(el) => (cardsRef.current[1] = el)}
           >
             <div className="card-inner">
               <div className="card-front">
-                <img src={core} alt="Core" />
+                <img src={sponsor2} alt="Core" style={{width: "100%", height: "100%", objectFit: "fill", borderRadius: "20px"}} />
               </div>
               <div className="card-back">
-                <h4>Core</h4>
+                <h4>R&A Plastics</h4>
                 <p>
-                  Engineering excellence<br />
-                  Empowering future technologies.
+                  R&A Plastics, established in 2016, specializes in manufacturing industrial moulds, plastic injection moulding products, and customized moulding solutions.
                 </p>
               </div>
             </div>

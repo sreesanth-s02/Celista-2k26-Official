@@ -73,7 +73,7 @@ export default function About() {
         
         <div className="about-text">
           <ScrollReveal>
-            The Department of Artificial Intelligence and Data Science, established in 2021 under Mrs. Mathangi Narayanan, is a center for innovation and excellence. With advanced labs, cutting-edge tools, and strong industry collaborations (Microsoft, Infosys, CTS, TCS), it equips students with essential skills to drive AI and data science advancements under expert faculty guidance.
+            The Department of Artificial Intelligence and Data Science, established in 2021 under Mrs. Mathangi Narayanan, is a center for innovation and excellence. With advanced labs, cutting-edge tools, and strong industry collaborations, it equips students with essential skills to drive AI and data science advancements under expert faculty guidance.
           </ScrollReveal>
         </div>
       </div>

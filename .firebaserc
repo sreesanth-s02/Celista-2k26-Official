@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "celista-96005"
+  },
+  "targets": {
+    "celista-96005": {
+      "hosting": {
+        "celista2k26": [
+          "celista2k26"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}

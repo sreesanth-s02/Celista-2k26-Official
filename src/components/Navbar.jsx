@@ -1,8 +1,11 @@
 
 import PillNav from "./PillNav";
 import logo from "../assets/logo.png"; // change if png
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
+  const navigate = useNavigate();
+
 
   return (
     <PillNav
@@ -13,7 +16,7 @@ const Navbar = () => {
   { label: "About", href: "#about" },
   { label: "Events", href: "#events" },
   { label: "Location", href: "#location" },
-  { label: "Gallery", href: "/memories" },
+  { label: "Gallery", onclick: () => navigate("/memories") },
   { label: "Sponsors", href: "#sponsors" },
 ]}
       baseColor="#000000"

@@ -181,7 +181,7 @@ function FlipCard({ event, navigate, category }) {
             <div className={`h-px w-full ${theme.divider}`} />
 
             {/* Description */}
-            <p className="text-sm text-gray-300 leading-relaxed line-clamp-5">
+            <p className="text-sm text-gray-300 leading-relaxed text-justify">
               {event.description}
             </p>
           </div>

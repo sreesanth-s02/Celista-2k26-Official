@@ -47,9 +47,9 @@ const Sponsors = () => {
                 <img src={sponsor1} alt="Goutham Jewllery" style={{width: "100%", height: "100%", objectFit: "contain", borderRadius: "20px"}} />
               </div>
               <div className="card-back">
-                <h4>Goutham Jewllery</h4>
+                <h4>Gautham Jewllery</h4>
                 <p>
-                  Goutham Jewellery, Kodambakkam offers quality gold, silver jewellery with elegant designs for every occasion.
+                  Gautham Jewellery, Kodambakkam offers quality gold, silver jewellery with elegant designs for every occasion.
                 </p>
               </div>
             </div>
@@ -67,7 +67,7 @@ const Sponsors = () => {
               <div className="card-back">
                 <h4>R&A Plastics</h4>
                 <p>
-                  R&A Plastics, established in 2016, specializes in manufacturing industrial moulds, plastic injection moulding products, and customized moulding solutions.
+                  R&A Plastics, est. in 2016, specializes in manufacturing industrial moulds, plastic injection moulding products, and customized moulding solutions.
                 </p>
               </div>
             </div>

@@ -24,8 +24,8 @@ const creditsData = [
     ]
   },
   {
-    role: "DESIGN & MAGANIZE",
-    names: ["Aathika Nisha", "Aishwarya", "Anees Fathima", "Mridhunitha","Darshan",]
+    role: "POSTER DESIGN & MAGAZINE",
+    names: ["Aathika Nisha", "Aishwarya", "Anees Fathima","Dhanuza","Darshan","Hema Daarini","Madhumitha","Mridhunitha","Prathiksha","Priyanka","Preethi","Venugopal"]
   },
   {
     role: "EDITING",
@@ -62,6 +62,13 @@ const creditsData = [
     ]
   },
   {
+    role: "SYMPOSIUM STAFF COORDINATORS",
+    names: [
+      "Mrs. Pavithra K",
+      "Mrs. Swathy K"
+    ]
+  },
+  {
     role: "STAFF COORDINATORS",
     names: [
       "Mrs. Dhivya T",
@@ -75,7 +82,15 @@ const creditsData = [
       "Mrs. Sabhitha C H",
       "Ms. Yogitha"
     ]
+  },
+  {
+    role: "SPECIAL THANKS TO",
+    names: [
+      "Dr. Mathangi Narayanan",
+      "Dr. S.V Saravanan"
+    ]
   }
+  
 ];
 
 const processedCredits = creditsData.flatMap((item) => {

@@ -43,37 +43,34 @@ const PillNav = ({
      SCROLL FUNCTION
   ================================= */
 
-const handleScrollTo = (href) => {
+  const handleScrollTo = (href) => {
+    if (href === "#home") {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
 
-  // If Home clicked
-  if (href === "#home") {
+      setIsMobileMenuOpen(false);
+      return;
+    }
+
+    const target = document.querySelector(href);
+    if (!target) return;
+
+    const navbarHeight = 80;
+
+    const offset =
+      target.getBoundingClientRect().top +
+      window.scrollY -
+      navbarHeight;
+
     window.scrollTo({
-      top: 0,
+      top: offset,
       behavior: "smooth",
     });
 
     setIsMobileMenuOpen(false);
-    return;
-  }
-
-  // For other sections
-  const target = document.querySelector(href);
-  if (!target) return;
-
-  const navbarHeight = 80; // adjust if needed
-
-  const offset =
-    target.getBoundingClientRect().top +
-    window.scrollY -
-    navbarHeight;
-
-  window.scrollTo({
-    top: offset,
-    behavior: "smooth",
-  });
-
-  setIsMobileMenuOpen(false);
-};
+  };
 
   /* ================================
      GSAP LAYOUT
@@ -217,33 +214,42 @@ const handleScrollTo = (href) => {
         </a>
 
         {/* DESKTOP NAV */}
-        <div className="pill-nav-items desktop-only" ref={navItemsRef}>
+        <div
+  className={`pill-nav-items desktop-only ${isMobileMenuOpen ? "show-mobile-nav" : ""}`}
+  ref={navItemsRef}
+>
           <ul className="pill-list">
             {items.map((item, i) => (
               <li key={i}>
                 <a
-  href={item.href}
-  className="pill"
-  onClick={(e) => {
-    if (isScrollLink(item.href)) {
-      e.preventDefault();
-      handleScrollTo(item.href);
-    }
-  }}
-  onMouseEnter={() => handleEnter(i)}
-  onMouseLeave={() => handleLeave(i)}
->
-  <span
-    className="hover-circle"
-    ref={(el) => (circleRefs.current[i] = el)}
-  />
-  <span className="label-stack">
-    <span className="pill-label">{item.label}</span>
-    <span className="pill-label-hover">
-      {item.label}
-    </span>
-  </span>
-</a>
+                  href={item.href || "#"}
+                  className="pill"
+                  onClick={(e) => {
+                    if (item.onClick) {
+                      e.preventDefault();
+                      item.onClick();
+                      return;
+                    }
+
+                    if (isScrollLink(item.href)) {
+                      e.preventDefault();
+                      handleScrollTo(item.href);
+                    }
+                  }}
+                  onMouseEnter={() => handleEnter(i)}
+                  onMouseLeave={() => handleLeave(i)}
+                >
+                  <span
+                    className="hover-circle"
+                    ref={(el) => (circleRefs.current[i] = el)}
+                  />
+                  <span className="label-stack">
+                    <span className="pill-label">{item.label}</span>
+                    <span className="pill-label-hover">
+                      {item.label}
+                    </span>
+                  </span>
+                </a>
               </li>
             ))}
           </ul>
@@ -251,7 +257,7 @@ const handleScrollTo = (href) => {
 
         {/* MOBILE BUTTON */}
         <button
-          className="mobile-menu-button mobile-only"
+          className={`mobile-menu-button mobile-only ${isMobileMenuOpen ? "hidden" : ""}`}
           onClick={toggleMobileMenu}
           ref={hamburgerRef}
         >
@@ -263,29 +269,7 @@ const handleScrollTo = (href) => {
         </button>
       </nav>
 
-      {/* MOBILE MENU */}
-      <div
-        className="mobile-menu-popover mobile-only"
-        ref={mobileMenuRef}
-        style={cssVars}
-      >
-        <ul className="mobile-menu-list">
-          {items.map((item, i) => (
-            <li key={i}>
-              <a
-                href={item.href}
-                className="mobile-menu-link"
-                onClick={(e) => {
-                  e.preventDefault();
-                  handleScrollTo(item.href);
-                }}
-              >
-                {item.label}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </div>
+      
     </div>
   );
 };

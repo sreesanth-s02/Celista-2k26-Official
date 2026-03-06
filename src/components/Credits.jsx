@@ -28,8 +28,8 @@ const creditsData = [
     names: ["Aathika Nisha", "Aishwarya", "Anees Fathima","Dhanuza","Darshan","Hema Daarini","Madhumitha","Mridhunitha","Prathiksha","Priyanka","Preethi","Venugopal"]
   },
   {
-    role: "EDITING",
-    names: ["Rohith", "Samuel", "Kishore S"]
+    role: " VIDEO EDITING",
+    names: ["Rohith Devavradhan G", "Samuel R", "Kishore S"]
   },
   {
     role: "EVENT COORDINATORS",
@@ -71,16 +71,16 @@ const creditsData = [
   {
     role: "STAFF COORDINATORS",
     names: [
-      "Mrs. Dhivya T",
-      "Mrs. Jayapriya A",
-      "Mrs. Valentina G",
-      "Dr. Ramasubramaniyan G",
-      "Mrs. Punitha T",
-      "Mrs. Ani Bernish T",
-      "Mrs. Prema",
-      "Mr. Prabhakaran T",
-      "Mrs. Sabhitha C H",
-      "Ms. Yogitha"
+      "Asst Prof. Mrs. Dhivya T",
+      "Asst Prof. Dr. Ramasubramaniyam S",
+      "Asst Prof. Mrs. Jayapriya A",
+      "Asst Prof. Mrs. Valentina G",
+      "Asst Prof. Mrs. Punitha T",
+      "Asst Prof. Mrs. Ani Bernish T",
+      "Asst Prof. Mrs. Prema",
+      "Asst Prof. Mr. Prabhakaran T",
+      "Asst Prof. Mrs. Sabhitha C H",
+      "Asst Prof. Ms. Yogitha"
     ]
   },
   {

@@ -132,11 +132,6 @@
                   <p className="text-base font-inter">{event.contact1}</p>
                   <p className="text-base font-inter">{event.contact2}</p>
 
-                  <h4 className={`${theme.text} font-light tracking-widest uppercase font-orbitron text-lg mt-6`}>
-                    STAFF COORDINATORS
-                  </h4>
-                  <p className="text-base font-inter">{event.staffCoordinator}</p>
-
                   {event.registrationLink === "Open Registration" ? (
                     <div className="block w-full py-4 text-center font-bold rounded-xl text-white border border-white/20 cursor-default tracking-widest">
                       OPEN REGISTRATION

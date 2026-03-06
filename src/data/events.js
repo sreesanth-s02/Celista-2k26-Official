@@ -15,7 +15,10 @@ Round 2:
 Teams enter a digital maze of locked folders and encrypted files, solving quizzes based on AI, ML, Deep Learning, and Data Science to reconstruct a fragmented image.
 
 Round 3:
-Teams follow a mysterious map to find puzzle pieces and unlock a treasure box to complete the challenge.`,
+Teams follow a mysterious map to find puzzle pieces and unlock a treasure box to complete the challenge.
+
+Complementary Food will be provided 
+Participate and win exciting prizes `,
 
 prerequisites:[
 "Basic knowledge of AI, ML, and Data Science concepts",
@@ -37,10 +40,10 @@ registrationLink:"https://forms.gle/t6RS6pR6uyKhfnNP9",
 date:"17-03-2026",
 time:"09:00 AM",
 coordinator1:"Varshaa P S",
-contact1:"90420 82260",
+contact1:"+91 90420 82260",
 coordinator2:"Prince",
-contact2:"63811614459",
-staffCoordinator:"Mrs.Jayapriya"
+contact2:"+91 6381161445",
+staffCoordinator:"Asst Prof. Mrs. Jayapriya"
 },
 
 {
@@ -58,7 +61,10 @@ Top scorers qualify for the next round.
 
 Round 2 (Comic Creation):
 A theme is given on the spot. Teams create a comic using any AI tools.
-Judging criteria include creativity, storytelling, relevance, and effective AI usage.`,
+Judging criteria include creativity, storytelling, relevance, and effective AI usage.
+
+Complementary Food will be provided 
+Participate and win exciting prizes `,
 
 prerequisites:[
 "Basic understanding of Artificial Intelligence concepts",
@@ -80,10 +86,10 @@ registrationLink:"https://forms.gle/WQ881yt3xeYnKVy99",
 date:"17-03-2026",
 time:"09:00 AM",
 coordinator1:"Sarika R",
-contact1:"90420 82260",
+contact1:"+91 90420 82260",
 coordinator2:"Preethi Y",
-contact2:"63811614459",
-staffCoordinator:"Dr.Ramasubramanian"
+contact2:"+91 6381161445",
+staffCoordinator:"Asst Prof. Dr. Ramasubramaniyam S"
 },
 
 {
@@ -105,7 +111,10 @@ Round 3 – Model Accuracy Showdown
 Teams build and fine-tune machine learning models on a new dataset to achieve the highest accuracy.
 
 Final Round – Live AI Challenge
-Top-performing teams face a real-time AI problem-solving round with live leaderboard updates.`,
+Top-performing teams face a real-time AI problem-solving round with live leaderboard updates.
+
+Complementary Food will be provided 
+Participate and win exciting prizes `,
 
 prerequisites:[
 "Basic knowledge of Machine Learning and Artificial Intelligence",
@@ -129,10 +138,10 @@ registrationLink:"https://forms.gle/XoQQyxssr3GbRNdE6",
 date:"17-03-2026",
 time:"09:00 AM",
 coordinator1:"Eraianbu D",
-contact1:"88257 88820",
+contact1:"+91 88257 88820",
 coordinator2:"Krithika",
-contact2:"63811614459",
-staffCoordinator:"Mrs.Dhivya"
+contact2:"+91 6381161445",
+staffCoordinator:"Asst Prof. Mrs. Dhivya"
 },
 
 {
@@ -149,7 +158,10 @@ Participants answer questions about players, teams, records, match situations, a
 
 Further Rounds
 Qualified teams face interactive challenges simulating real cricket team management.
-Participants must analyze player performance and build a balanced squad.`,
+Participants must analyze player performance and build a balanced squad.
+
+Complementary Food will be provided 
+Participate and win exciting prizes `,
 
 prerequisites:[
 "Basic knowledge of cricket rules and formats",
@@ -171,10 +183,10 @@ registrationLink:"https://forms.gle/nRF3qpYDubSawFuP7",
 date:"17-03-2026",
 time:"09:00 AM",
 coordinator1:"C S Sudharsann",
-contact1:"9176749682",
+contact1:"+91 9176749682",
 coordinator2:"Rahul",
-contact2:"63811614459",
-staffCoordinator:"Mr.Prabhakaran"
+contact2:"+91 6381161445",
+staffCoordinator:"Asst Prof. Mr. Prabhakaran"
 },
 
 {
@@ -189,7 +201,10 @@ fullDescription:`Round 1 – Crisis Role Play
 Participants create a team identity, assign roles, and present a 1-minute heist plan.
 
 Round 2 – One Code, One Vault
-Teams solve riddles and number puzzles to discover digits of the vault code.`,
+Teams solve riddles and number puzzles to discover digits of the vault code.
+
+Complementary Food will be provided 
+Participate and win exciting prizes `,
 
 prerequisites:[
 "Creative thinking and storytelling",
@@ -211,10 +226,10 @@ registrationLink:"https://forms.gle/cSjuv5kBN3J8TXvPA",
 date:"17-03-2026",
 time:"09:00 AM",
 coordinator1:"Swapnika P",
-contact1:"9042082260",
+contact1:"+91 90420 82260",
 coordinator2:"Rithika V",
-contact2:"63811614459",
-staffCoordinator:"Mrs.Ani Bernish"
+contact2:"+91 6381161445",
+staffCoordinator:"Asst Prof. Mrs. Ani Bernish"
 },
 
 {
@@ -230,7 +245,10 @@ Instructions are revealed only when the round begins.
 Each team gets only one attempt per task.
 
 Teams may attempt up to 8 tasks out of 12.
-Completing 6 tasks secures victory.`,
+Completing 6 tasks secures victory.
+
+Complementary Food will be provided 
+Participate and win exciting prizes `,
 
 prerequisites:[
 "Quick reflexes",
@@ -252,10 +270,10 @@ registrationLink:"On Spot  Registration",
 date:"17-03-2026",
 time:"09:00 AM",
 coordinator1:"Nikitha S",
-contact1:"90420 82260",
+contact1:"+91 90420 82260",
 coordinator2:"Akshaya G",
-contact2:"63811614459",
-staffCoordinator:"Mrs.Yogitha"
+contact2:"+91 6381161445",
+staffCoordinator:"Asst Prof. Mrs. Yogitha"
 },
 {
 id:"Think & Link",
@@ -272,7 +290,10 @@ Round 2 – Link the Words
 Participants connect visual clues logically to form a technical term.
 
 Round 3 – Mystery Tech
-A surprise round testing analytical thinking and reasoning.`,
+A surprise round testing analytical thinking and reasoning.
+
+Complementary Food will be provided 
+Participate and win exciting prizes `,
 
 prerequisites:[
 "Basic knowledge of technology terms",
@@ -294,10 +315,10 @@ registrationLink:"https://forms.gle/kMa5xdzVxkoUWzHP8",
 date:"17-03-2026",
 time:"09:00 AM",
 coordinator1:"Sanjita R",
-contact1:"90420 82260",
+contact1:"+91 90420 82260",
 coordinator2:"Dhilothi B",
-contact2:"63811614459",
-staffCoordinator:"Mrs.Punitha"
+contact2:"+91 6381161445",
+staffCoordinator:"Asst Prof. Mrs. Punitha"
 },
 
 {
@@ -306,7 +327,7 @@ name:"Drift X",
 category:"technical",
 
 description:`Push the limits of speed and control in DRIFT_X.
-Race and dominate the arena with your custom RC bot.`,
+Race and dominate the arena with your custom RC bot`,
 
 fullDescription:`Round 1 – RC Race
 Teams race their bots on a challenging track.
@@ -315,7 +336,10 @@ Round 2 – RC Soccer
 Teams compete in an RC soccer match.
 
 Round 3 – Track Hustle
-Bots navigate a complex obstacle track.`,
+Bots navigate a complex obstacle track.
+
+Complementary Food will be provided 
+Participate and win exciting prizes `,
 
 prerequisites:[
 "Basic knowledge of RC bot handling",
@@ -337,10 +361,10 @@ registrationLink:"https://forms.gle/xWjNqLgeSDJHGXWu9",
 date:"17-03-2026",
 time:"09:00 AM",
 coordinator1:"Harish E",
-contact1:"63821 39281",
+contact1:"+91 63821 39281",
 coordinator2:"Jayanth",
-contact2:"63811614459",
-staffCoordinator:"Mrs.Valentina"
+contact2:"+91 6381161445",
+staffCoordinator:"Asst Prof. Mrs. Valentina"
 },
 {
 id: "Rhythm Riot",
@@ -364,7 +388,10 @@ Bonus Round – Performance
 Participants may sing or perform choreography for bonus points.
 
 Round 4 – Missing Lyrics
-Teams identify the missing lyric from given songs.`,
+Teams identify the missing lyric from given songs.
+
+Complementary Food will be provided 
+Participate and win exciting prizes `,
 
 prerequisites:[
 "Basic knowledge of cinema and music",
@@ -386,10 +413,10 @@ registrationLink:"https://forms.gle/j6VtXWA3UjkS5Zj9A",
 date:"17-03-2026",
 time:"09:00 AM",
 coordinator1:"Paranthaman P",
-contact1:"9840236868",
+contact1:"+91 9840236868",
 coordinator2:"Kanishka K",
-contact2:"63811614459",
-staffCoordinator:"Mrs.Prema"
+contact2:"+91 6381161445",
+staffCoordinator:"Asst Prof. Mrs. Prema"
 },
 
 {
@@ -399,14 +426,17 @@ category: "non-technical",
 
 description: `Enter the mysterious world of the Upside Down.
 Decode hidden clues and solve puzzles before time runs out.
-Only strong teamwork and sharp thinking can complete the rescue mission.`,
+Only strong teamwork and sharp thinking can complete the rescue mission`,
 
 fullDescription: `Round 1 – Hawkins Network Meltdown
 Teams solve logic challenges and decode symbols to generate a stabilization key.
 
 Round 2 – The Upside Down Rescue
 Teams enter a two-room escape challenge where one member is trapped.
-Using puzzles and clues, teams must unlock both rooms and complete the rescue.`,
+Using puzzles and clues, teams must unlock both rooms and complete the rescue.
+
+Complementary Food will be provided 
+Participate and win exciting prizes `,
 
 prerequisites:[
 "Strong logical and problem-solving skills",
@@ -428,9 +458,9 @@ registrationLink:"https://forms.gle/KVpbok4gBZSP8DBd9",
 date:"17-03-2026",
 time:"09:00 AM",
 coordinator1:"Dakshineshwar Vel A",
-contact1:"7845168093",
+contact1:"+91 7845168093",
 coordinator2:"Naaneshwari",
-contact2:"63811614459",
-staffCoordinator:"Mrs.Sabitha"
+contact2:"+91 6381161445",
+staffCoordinator:"Asst Prof. Mrs. Sabitha"
 }
 ];

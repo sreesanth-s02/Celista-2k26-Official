@@ -1,4 +1,3 @@
-
 import PillNav from "./PillNav";
 import logo from "../assets/logo.png"; // change if png
 import { useNavigate } from "react-router-dom";
@@ -12,13 +11,13 @@ const Navbar = () => {
       logo={logo}
       logoAlt="Company Logo"
       items={[
-  { label: "Home", href: "#home" },
-  { label: "About", href: "#about" },
-  { label: "Events", href: "#events" },
-  { label: "Location", href: "#location" },
-  { label: "Gallery", onclick: () => navigate("/memories") },
-  { label: "Sponsors", href: "#sponsors" },
-]}
+        { label: "Home", href: "#home" },
+        { label: "About", href: "#about" },
+        { label: "Events", href: "#events" },
+        { label: "Location", href: "#location" },
+  { label: "Gallery", onClick: () => navigate("/memories") },
+        { label: "Sponsors", href: "#sponsors" },
+      ]}
       baseColor="#000000"
       pillColor="#ffffff"
       pillTextColor="#000000"

@@ -183,14 +183,14 @@ body {
 @media (max-width: 900px) {
   .about-section {
     padding: 80px 6%;
-    gap: 100px;
+    gap: 60px;
   }
 
   .about-row,
   .about-row.reverse {
     flex-direction: column !important;
     text-align: center;
-    gap: 40px;
+    gap: 0px;
   }
 
   .about-image img {

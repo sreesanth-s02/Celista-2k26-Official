@@ -66,7 +66,7 @@ function App() {
 
       {/* Foreground */}
       <div className="main-content">
-        <CustomCursor />
+        {window.innerWidth > 900 && <CustomCursor />}
 
         {!shouldHideNavbar && <Navbar />}
 

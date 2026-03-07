@@ -47,7 +47,7 @@ const Sponsors = () => {
                 <img src={sponsor1} alt="Goutham Jewllery" loading="lazy" decoding="async" style={{width: "100%", height: "100%", objectFit: "contain", borderRadius: "20px"}} />
               </div>
               <div className="card-back">
-                <h4>Gautham Jewllers</h4>
+                <h4>Gautham Jewellers</h4>
                 <p>
                   Gautham Jewellers, Kodambakkam offers quality gold, silver jewellery with elegant designs for every occasion.
                 </p>

@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from "react";
 import "./Sponsors.css";
 
-import sponsor1 from "../assets/sponsors/sponsor1.PNG";
-import sponsor2 from "../assets/sponsors/sponsor2.png";
+import sponsor1 from "../assets/sponsors/sponsor1.webp";
+import sponsor2 from "../assets/sponsors/sponsor2.webp";
 
 const Sponsors = () => {
   const cardsRef = useRef([]);
@@ -44,12 +44,12 @@ const Sponsors = () => {
           >
             <div className="card-inner">
               <div className="card-front">
-                <img src={sponsor1} alt="Goutham Jewllery" style={{width: "100%", height: "100%", objectFit: "contain", borderRadius: "20px"}} />
+                <img src={sponsor1} alt="Goutham Jewllery" loading="lazy" decoding="async" style={{width: "100%", height: "100%", objectFit: "contain", borderRadius: "20px"}} />
               </div>
               <div className="card-back">
                 <h4>Gautham Jewllery</h4>
                 <p>
-                  Gautham Jewellery, Kodambakkam offers quality gold, silver jewellery with elegant designs for every occasion.
+                  Gautham Jewellers, Kodambakkam offers quality gold, silver jewellery with elegant designs for every occasion.
                 </p>
               </div>
             </div>
@@ -62,7 +62,7 @@ const Sponsors = () => {
           >
             <div className="card-inner">
               <div className="card-front">
-                <img src={sponsor2} alt="Core" style={{width: "100%", height: "100%", objectFit: "fill", borderRadius: "20px"}} />
+                <img src={sponsor2} alt="R&A Plastics" loading="lazy" decoding="async" style={{width: "100%", height: "100%", objectFit: "fill", borderRadius: "20px"}} />
               </div>
               <div className="card-back">
                 <h4>R&A Plastics</h4>

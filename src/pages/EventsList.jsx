@@ -161,6 +161,8 @@ function FlipCard({ event, navigate, category }) {
           <img
             src={event.poster}
             alt={event.name}
+            loading="lazy"
+            decoding="async"
             className="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-500"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60" />

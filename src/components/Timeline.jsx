@@ -1,16 +1,16 @@
 import { motion } from "framer-motion";
 
-import eyes from "../assets/eyes.png";
-import circuit from "../assets/circuit.png";
-import core from "../assets/core.png";
-import preparation from "../assets/preparation.png";
-import logo from "../assets/logo.png";
+import eyes from "../assets/eyes.webp";
+import circuit from "../assets/circuit.webp";
+import core from "../assets/core.webp";
+import preparation from "../assets/preparation.webp";
+import logo from "../assets/logo.webp";
 
 const stages = [
   {
     title: "Official Announcement",
     subtitle: " Symposium Reveal",
-    date: "19/02/2025",
+    date: "19/02/2026",
     robot: eyes,
     terminal: "Initializing optical system..."
   },

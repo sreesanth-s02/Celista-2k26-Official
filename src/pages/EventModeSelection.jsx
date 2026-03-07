@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import robotImage from "../assets/events.png";
+import robotImage from "../assets/events.webp";
 
 export default function EventModeSelection() {
   const navigate = useNavigate();

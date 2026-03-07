@@ -35,7 +35,7 @@ rules:[
 ],
 
 venue:"AI&DS Lab 3,4",
-poster:"/posters/borderland_decrypt.png",
+poster:"/posters/borderland_decrypt.webp",
 registrationLink:"https://forms.gle/t6RS6pR6uyKhfnNP9",
 date:"17-03-2026",
 time:"09:00 AM",
@@ -81,7 +81,7 @@ rules:[
 ],
 
 venue:"AI&DS Lab 5,6",
-poster:"/posters/comic_nexus.png",
+poster:"/posters/comic_nexus.webp",
 registrationLink:"https://forms.gle/WQ881yt3xeYnKVy99",
 date:"17-03-2026",
 time:"09:00 AM",
@@ -133,7 +133,7 @@ rules:[
 ],
 
 venue:"AI&DS Lab 1,2",
-poster:"/posters/AI_Arena.png",
+poster:"/posters/AI_Arena.webp",
 registrationLink:"https://forms.gle/XoQQyxssr3GbRNdE6",
 date:"17-03-2026",
 time:"09:00 AM",
@@ -178,7 +178,7 @@ rules:[
 ],
 
 venue:"Mechanical Block T-4",
-poster:"/posters/cricket_conquest.png",
+poster:"/posters/cricket_conquest.webp",
 registrationLink:"https://forms.gle/nRF3qpYDubSawFuP7",
 date:"17-03-2026",
 time:"09:00 AM",
@@ -221,7 +221,7 @@ rules:[
 ],
 
 venue:"Mechanical Block S-5",
-poster:"/posters/heist_horizon.png",
+poster:"/posters/heist_horizon.webp",
 registrationLink:"https://forms.gle/cSjuv5kBN3J8TXvPA",
 date:"17-03-2026",
 time:"09:00 AM",
@@ -265,7 +265,7 @@ rules:[
 ],
 
 venue:"Mechanical Block T-2,T-3",
-poster:"/posters/minute_to_win.png",
+poster:"/posters/minute_to_win.webp",
 registrationLink:"On Spot  Registration",
 date:"17-03-2026",
 time:"09:00 AM",
@@ -310,7 +310,7 @@ rules:[
 ],
 
 venue:"Mechanical Block S-4",
-poster:"/posters/think_link.png",
+poster:"/posters/think_link.webp",
 registrationLink:"https://forms.gle/kMa5xdzVxkoUWzHP8",
 date:"17-03-2026",
 time:"09:00 AM",
@@ -356,7 +356,7 @@ rules:[
 ],
 
 venue:"Badminton Court",
-poster:"/posters/drift_x.png",
+poster:"/posters/drift_x.webp",
 registrationLink:"https://forms.gle/xWjNqLgeSDJHGXWu9",
 date:"17-03-2026",
 time:"09:00 AM",
@@ -408,7 +408,7 @@ rules:[
 ],
 
 venue:"Mechanical Block T-4",
-poster:"/posters/Rhythm_riot.png",
+poster:"/posters/Rhythm_riot.webp",
 registrationLink:"https://forms.gle/j6VtXWA3UjkS5Zj9A",
 date:"17-03-2026",
 time:"09:00 AM",
@@ -453,7 +453,7 @@ rules:[
 ],
 
 venue:"Mechanical Block T-5,T-6",
-poster:"/posters/stranger_things.png",
+poster:"/posters/stranger_things.webp",
 registrationLink:"https://forms.gle/KVpbok4gBZSP8DBd9",
 date:"17-03-2026",
 time:"09:00 AM",

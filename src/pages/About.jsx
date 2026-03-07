@@ -3,9 +3,9 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import ScrollReveal from "../components/ScrollReveal";
-import collegeLogo from "../assets/college.png";
-import deptLogo from "../assets/department.png";
-import celistaLogo from "../assets/logo.png";
+import collegeLogo from "../assets/college.webp";
+import deptLogo from "../assets/department.webp";
+import celistaLogo from "../assets/logo.webp";
 
 
 gsap.registerPlugin(ScrollTrigger);

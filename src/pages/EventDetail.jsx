@@ -132,7 +132,11 @@
                   <p className="text-base font-inter">{event.contact1}</p>
                   <p className="text-base font-inter">{event.contact2}</p>
 
-                  {event.registrationLink === "Open Registration" ? (
+                  {event.registrationLink === "On Spot  Registration" ? (
+                    <div className="block w-full py-4 text-center font-bold rounded-xl text-white border border-white/20 cursor-default tracking-widest">
+                      ON SPOT REGISTRATION
+                    </div>
+                  ) : event.registrationLink === "Open Registration" ? (
                     <div className="block w-full py-4 text-center font-bold rounded-xl text-white border border-white/20 cursor-default tracking-widest">
                       OPEN REGISTRATION
                     </div>

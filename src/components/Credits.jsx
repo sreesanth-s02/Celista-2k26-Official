@@ -55,7 +55,7 @@ const creditsData = [
       "Preethi Y",
       "Dhilothi B",
       "Rithika V",
-      "Kanishka R",
+      "Kanishka K",
       "Rahul",
       "Naaneshwari",
       "Akshaya G"
@@ -64,8 +64,8 @@ const creditsData = [
   {
     role: "SYMPOSIUM STAFF COORDINATORS",
     names: [
-      "Mrs. Pavithra K",
-      "Mrs. Swathy K"
+      "Asst Prof Mrs. Pavithra K",
+      "Asst Prof Mrs. Swathy K"
     ]
   },
   {

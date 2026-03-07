@@ -9,4 +9,33 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  build: {
+  chunkSizeWarningLimit: 1000,
+  rollupOptions: {
+    output: {
+      manualChunks(id) {
+        if (id.includes("node_modules")) {
+
+          if (id.includes("react")) {
+            return "react-core"
+          }
+
+          if (id.includes("react-router")) {
+            return "router"
+          }
+
+          if (id.includes("framer-motion")) {
+            return "animation"
+          }
+
+          if (id.includes("lucide-react")) {
+            return "icons"
+          }
+
+          return "vendor"
+        }
+      }
+    }
+  }
+}
 })

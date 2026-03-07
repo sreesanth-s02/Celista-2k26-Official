@@ -1,15 +1,15 @@
 import DomeGallery from "../components/DomeGallery";
 import { useNavigate } from "react-router-dom";
 
-import M2 from "../assets/M2.jpeg";
-import M3 from "../assets/M3.jpeg";
-import M4 from "../assets/M4.jpeg";
-import M5 from "../assets/M5.jpeg";
-import M6 from "../assets/M6.jpeg";
-import M7 from "../assets/M7.jpeg";
-import M8 from "../assets/M8.jpeg";
-import M9 from "../assets/M9.jpeg";
-import Mi from "../assets/Mi.jpeg";
+import M2 from "../assets/M2.webp";
+import M3 from "../assets/M3.webp";
+import M4 from "../assets/M4.webp";
+import M5 from "../assets/M5.webp";
+import M6 from "../assets/M6.webp";
+import M7 from "../assets/M7.webp";
+import M8 from "../assets/M8.webp";
+import M9 from "../assets/M9.webp";
+import Mi from "../assets/Mi.webp";
 
 export default function Memories() {
   const navigate = useNavigate();

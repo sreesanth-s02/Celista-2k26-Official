@@ -1,24 +1,27 @@
 import { useEffect, useState } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import Preloader from "./components/Preloader";
+import { lazy,Suspense } from "react";
+
+
+const Hero = lazy(() => import("./pages/Hero"));
+const About = lazy(() => import("./pages/About"));
+const EventModeSelection = lazy(() => import("./pages/EventModeSelection"));
+const EventsList = lazy(() => import("./pages/EventsList"));
+const EventDetail = lazy(() => import("./pages/EventDetail"));
+const Footer = lazy(() => import("./pages/Footer"));
+const Location = lazy(() => import("./pages/Location"));
+const Sponsors = lazy(() => import("./components/Sponsors"));
+const Credits = lazy(() => import("./components/Credits"));
+const Timeline = lazy(() => import("./components/Timeline"));
+const Memories = lazy(() => import("./pages/Memories"));
+const ChatBot = lazy(() => import("./components/Chatbot/Chatbot"));
 
 import Navbar from "./components/Navbar";
-import Hero from "./pages/Hero";
-import About from "./pages/About";
-import EventModeSelection from "./pages/EventModeSelection";
-import EventsList from "./pages/EventsList";
-import EventDetail from "./pages/EventDetail";
 import CountdownTimer from "./components/CountdownTimer";
 import GlobalSmoke from "./components/GlobalSmoke";
 import CustomCursor from "./components/CustomCursor";
-import Footer from "./pages/Footer";
-import Location from "./pages/Location";
 import Particles from "./components/Particles";
-import ChatBot from "./components/Chatbot/Chatbot";
-import Sponsors from "./components/Sponsors";
-import Credits from "./components/Credits";
-import Timeline from "./components/Timeline";
-import Memories from "./pages/Memories";
 
 function App() {
 
@@ -62,14 +65,20 @@ function App() {
       {/* Background */}
       <Particles />
       <GlobalSmoke hidden={hideSmoke} />
+      <Suspense fallback={null}>
       <ChatBot />
+      </Suspense>
+
 
       {/* Foreground */}
+      <Suspense
+        fallback={<Preloader />}
+      >
       <div className="main-content">
-        {window.innerWidth > 900 && <CustomCursor />}
+        {typeof window !== "undefined" && window.innerWidth > 900 && <CustomCursor />}
 
         {!shouldHideNavbar && <Navbar />}
-
+        
         <Routes>
           <Route
             path="/"
@@ -112,6 +121,7 @@ function App() {
                       View Credits →
                     </button>
                   </div>
+
                 </section>
 
                 <Footer />
@@ -130,7 +140,9 @@ function App() {
 
           <Route path="/credits" element={<Credits />} />
         </Routes>
+        
       </div>
+      </Suspense>
     </>
   );
 }

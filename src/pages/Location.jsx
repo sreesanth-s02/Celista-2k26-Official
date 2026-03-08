@@ -63,7 +63,7 @@ function Location() {
               width="100%"
               height="360"
               allowFullScreen
-              loading="lazy"
+              
               referrerPolicy="no-referrer-when-downgrade"
               className=" opacity-90"
               background="transparent"

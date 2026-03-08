@@ -3,7 +3,7 @@ import "./CountdownTimer.css";
 
 const EVENT_DATE = new Date("2026-03-17T00:00:00");
 
-export default function CountdownTimer() {
+export default function CountdownTimer({ docked } ) {
 
   const [timeLeft, setTimeLeft] = useState({});
   const [floating, setFloating] = useState(false);
@@ -32,23 +32,7 @@ export default function CountdownTimer() {
      FLOATING LOGIC (FROM SMART TIMER)
   =============================== */
 
-  useEffect(() => {
-    const hero = document.getElementById("home");
-
-    const onScroll = () => {
-      if (!hero) return;
-
-      const heroHeight = hero.offsetHeight;
-
-      // Adjust this + value to control when it floats
-      setFloating(window.scrollY > heroHeight + 250);
-    };
-
-    window.addEventListener("scroll", onScroll);
-    onScroll();
-
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+  
 
   /* ===============================
      CELLS
@@ -63,7 +47,7 @@ export default function CountdownTimer() {
 
   return (
     <div
-      className={`countdown-wrapper ${floating ? "floating" : ""}`}
+      className={`countdown-wrapper ${docked ? "floating" : ""}`}
     >
       <h2 className="countdown-title">
         THE COUNTDOWN BEGINS

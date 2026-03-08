@@ -139,15 +139,15 @@ if (text.includes("venue")) {
 
   return;
 }
-/* ================= FOOD QUESTION ================= */
+/* ================= lunch QUESTION ================= */
 
-if (text.includes("food")) {
+if (text.includes("lunch")) {
 
   setMessages(prev => [
     ...prev,
     {
       sender: "bot",
-      text: "Complementary food will be provided at the venue. Please contact the event coordinators for confirmation."
+      text: "Complementary lunch will be provided at the venue. Please contact the event coordinators for confirmation."
     }
   ]);
 

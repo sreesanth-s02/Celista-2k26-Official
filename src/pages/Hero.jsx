@@ -31,22 +31,17 @@ export default function Hero({ setRadius }) {
           pin: true,
           anticipatePin: 1,
          onLeave: () => {
-  let r = 0;
-
-  const interval = setInterval(() => {
-    r += 20;
-    setRadius(r);
-
-    if (r >= 150) {
-      clearInterval(interval);
-
-      setTimeout(() => {
-        setRadius(0);
-      }, 200);
-    }
-  }, 16);
-},
-    onEnterBack: () => {
+gsap.to({ r: 0 }, {
+  r: 150,
+  duration: 0.6,
+  ease: "power2.out",
+  onUpdate: function () {
+    setRadius(this.targets()[0].r);
+  },
+  onComplete: () => setRadius(0)
+});
+    },
+    onEnterBack : () => {
       document.querySelector(".about-bg")?.classList.remove("active");
     }
   }
@@ -73,7 +68,7 @@ export default function Hero({ setRadius }) {
 
   return (
     <>
-      <section id="home" ref={heroRef} className="hero">
+      <section id="hero" ref={heroRef} className="hero">
   <ThreeCanvas />
 
   <div className="hero-content">

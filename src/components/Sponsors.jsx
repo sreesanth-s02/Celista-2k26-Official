@@ -44,7 +44,7 @@ const Sponsors = () => {
           >
             <div className="card-inner">
               <div className="card-front">
-                <img src={sponsor1} alt="Goutham Jewllery" loading="lazy" decoding="async" style={{width: "100%", height: "100%", objectFit: "contain", borderRadius: "20px"}} />
+                <img src={sponsor1} alt="Goutham Jewellers"  style={{width: "100%", height: "100%", objectFit: "contain", borderRadius: "20px"}} />
               </div>
               <div className="card-back">
                 <h4>Gautham Jewellers</h4>
@@ -62,7 +62,7 @@ const Sponsors = () => {
           >
             <div className="card-inner">
               <div className="card-front">
-                <img src={sponsor2} alt="R&A Plastics" loading="lazy" decoding="async" style={{width: "100%", height: "100%", objectFit: "fill", borderRadius: "20px"}} />
+                <img src={sponsor2} alt="R&A Plastics"  style={{width: "100%", height: "100%", objectFit: "fill", borderRadius: "20px"}} />
               </div>
               <div className="card-back">
                 <h4>R&A Plastics</h4>

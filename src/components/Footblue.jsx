@@ -80,8 +80,24 @@ const Footblue = () => {
                 ./Social_Handles
               </h2>
               <ul className="space-y-2 text-gray-300 text-sm">
-                <li>@ Instagram</li>
-                <li>@ YouTube</li>
+                <li>
+                  <a
+                    href="https://www.instagram.com/celista.2k26?igsh=MWQwanBtZ2tmdG93MQ=="
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    @ Instagram -celista2k26
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="mailto:celista2k26@gmail.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    @ Gmail - celista2k26@gmail.com
+                  </a>
+                </li>
               </ul>
             </div>
           </div>
@@ -92,12 +108,12 @@ const Footblue = () => {
           <iframe
             src="https://maps.google.com/maps?q=Meenakshi%20Sundararajan%20Engineering%20College&t=&z=15&ie=UTF8&iwloc=&output=embed"
             className="w-full h-72"
-            loading="lazy"
+            
           ></iframe>
         </div>
 
         <p className="text-gray-400 text-sm">
-          // 363, Arcot Road, Kodambakkam, Chennai, Tamil Nadu 600024
+          Address: # 363, Arcot Road, Kodambakkam, Chennai, Tamil Nadu 600024
         </p>
       </div>
 

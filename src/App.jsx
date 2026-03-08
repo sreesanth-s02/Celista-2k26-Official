@@ -1,21 +1,21 @@
 import { useEffect, useState } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import Preloader from "./components/Preloader";
-import { lazy,Suspense } from "react";
 
 
-const Hero = lazy(() => import("./pages/Hero"));
-const About = lazy(() => import("./pages/About"));
-const EventModeSelection = lazy(() => import("./pages/EventModeSelection"));
-const EventsList = lazy(() => import("./pages/EventsList"));
-const EventDetail = lazy(() => import("./pages/EventDetail"));
-const Footer = lazy(() => import("./pages/Footer"));
-const Location = lazy(() => import("./pages/Location"));
-const Sponsors = lazy(() => import("./components/Sponsors"));
-const Credits = lazy(() => import("./components/Credits"));
-const Timeline = lazy(() => import("./components/Timeline"));
-const Memories = lazy(() => import("./pages/Memories"));
-const ChatBot = lazy(() => import("./components/Chatbot/Chatbot"));
+
+import Hero from "./pages/Hero";
+import About from "./pages/About";
+import EventModeSelection from "./pages/EventModeSelection";
+import EventsList from "./pages/EventsList";
+import EventDetail from "./pages/EventDetail";
+import Footer from "./pages/Footer";
+import Location from "./pages/Location";
+import Sponsors from "./components/Sponsors";
+import Credits from "./components/Credits";
+import Timeline from "./components/Timeline";
+import Memories from "./pages/Memories";
+import ChatBot from "./components/Chatbot/Chatbot";
 
 import Navbar from "./components/Navbar";
 import CountdownTimer from "./components/CountdownTimer";
@@ -27,6 +27,7 @@ function App() {
 
   /* ---------------- PRELOADER ---------------- */
   const [loading, setLoading] = useState(true);
+  const [radius, setRadius] = useState(0);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -39,6 +40,7 @@ function App() {
   /* ---------------- SCROLL ---------------- */
   const [scrollY, setScrollY] = useState(0);
   const location = useLocation();
+  
 
   const hideRoutes = ["/memories", "/credits"];
 
@@ -52,7 +54,12 @@ function App() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const dockTimer = scrollY > 400;
+  const hero = document.getElementById("hero");
+  const heroHeight = hero ? hero.offsetHeight : 800;
+
+  const isMobile = window.innerWidth < 768;
+
+  const dockTimer = scrollY > heroHeight + (isMobile ? 250 : 100);
   const hideSmoke = scrollY < window.innerHeight;
 
   /* ---------------- SHOW PRELOADER ---------------- */
@@ -65,17 +72,16 @@ function App() {
       {/* Background */}
       <Particles />
       <GlobalSmoke hidden={hideSmoke} />
-      <Suspense fallback={null}>
+      
       <ChatBot />
-      </Suspense>
+      
 
 
       {/* Foreground */}
-      <Suspense
-        fallback={<Preloader />}
-      >
+      
+        
       <div className="main-content">
-        {typeof window !== "undefined" && window.innerWidth > 900 && <CustomCursor />}
+        { window.innerWidth > 900 && <CustomCursor />}
 
         {!shouldHideNavbar && <Navbar />}
         
@@ -84,7 +90,7 @@ function App() {
             path="/"
             element={
               <>
-                <Hero />
+                <Hero  setRadius={setRadius}/>
                 <CountdownTimer docked={dockTimer} />
                 <About />
                 <Timeline />
@@ -142,7 +148,7 @@ function App() {
         </Routes>
         
       </div>
-      </Suspense>
+      
     </>
   );
 }

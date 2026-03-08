@@ -17,7 +17,7 @@ Teams enter a digital maze of locked folders and encrypted files, solving quizze
 Round 3:
 Teams follow a mysterious map to find puzzle pieces and unlock a treasure box to complete the challenge.
 
-Complementary Food will be provided 
+Complementary lunch will be provided 
 Participate and win exciting prizes `,
 
 prerequisites:[
@@ -63,7 +63,7 @@ Round 2 (Comic Creation):
 A theme is given on the spot. Teams create a comic using any AI tools.
 Judging criteria include creativity, storytelling, relevance, and effective AI usage.
 
-Complementary Food will be provided 
+Complementary lunch will be provided 
 Participate and win exciting prizes `,
 
 prerequisites:[
@@ -113,7 +113,7 @@ Teams build and fine-tune machine learning models on a new dataset to achieve th
 Final Round – Live AI Challenge
 Top-performing teams face a real-time AI problem-solving round with live leaderboard updates.
 
-Complementary Food will be provided 
+Complementary lunch will be provided 
 Participate and win exciting prizes `,
 
 prerequisites:[
@@ -160,7 +160,7 @@ Further Rounds
 Qualified teams face interactive challenges simulating real cricket team management.
 Participants must analyze player performance and build a balanced squad.
 
-Complementary Food will be provided 
+Complementary lunch will be provided 
 Participate and win exciting prizes `,
 
 prerequisites:[
@@ -203,7 +203,7 @@ Participants create a team identity, assign roles, and present a 1-minute heist 
 Round 2 – One Code, One Vault
 Teams solve riddles and number puzzles to discover digits of the vault code.
 
-Complementary Food will be provided 
+Complementary lunch will be provided 
 Participate and win exciting prizes `,
 
 prerequisites:[
@@ -247,7 +247,7 @@ Each team gets only one attempt per task.
 Teams may attempt up to 8 tasks out of 12.
 Completing 6 tasks secures victory.
 
-Complementary Food will be provided 
+Complementary lunch will be provided 
 Participate and win exciting prizes `,
 
 prerequisites:[
@@ -292,7 +292,7 @@ Participants connect visual clues logically to form a technical term.
 Round 3 – Mystery Tech
 A surprise round testing analytical thinking and reasoning.
 
-Complementary Food will be provided 
+Complementary lunch will be provided 
 Participate and win exciting prizes `,
 
 prerequisites:[
@@ -332,13 +332,10 @@ Race and dominate the arena with your custom RC bot`,
 fullDescription:`Round 1 – RC Race
 Teams race their bots on a challenging track.
 
-Round 2 – RC Soccer
-Teams compete in an RC soccer match.
-
-Round 3 – Track Hustle
+Round 2 – Track Hustle
 Bots navigate a complex obstacle track.
 
-Complementary Food will be provided 
+Complementary lunch will be provided 
 Participate and win exciting prizes `,
 
 prerequisites:[
@@ -390,7 +387,7 @@ Participants may sing or perform choreography for bonus points.
 Round 4 – Missing Lyrics
 Teams identify the missing lyric from given songs.
 
-Complementary Food will be provided 
+Complementary lunch will be provided 
 Participate and win exciting prizes `,
 
 prerequisites:[
@@ -435,7 +432,7 @@ Round 2 – The Upside Down Rescue
 Teams enter a two-room escape challenge where one member is trapped.
 Using puzzles and clues, teams must unlock both rooms and complete the rescue.
 
-Complementary Food will be provided 
+Complementary lunch will be provided 
 Participate and win exciting prizes `,
 
 prerequisites:[

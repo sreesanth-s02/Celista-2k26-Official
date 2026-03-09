@@ -70,9 +70,10 @@ This structure keeps the code **modular, scalable, and maintainable**.
 
 ---
 
-## Hosting(Firebase)
+## 🌍 Live Demo
 
-Link: celista2k26.web.app
+[🚀 Visit Website](https://celista2k26.web.app)
+
 ---
 
 ## ⚙️ Installation & Setup

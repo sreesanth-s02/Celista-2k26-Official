@@ -375,7 +375,7 @@ From guessing lyrics to acting out hits, only the true music masters will steal 
 fullDescription: `Round 1 – Fill It & Feel It
 Cinema and music themed fill-in-the-blanks.
 
-Round 2 – Damsharath (Music Edition)
+Round 2 – Dumb Charades (Music Edition)
 One participant acts while the other guesses the song.
 
 Round 3 – Guess the Song by Picture

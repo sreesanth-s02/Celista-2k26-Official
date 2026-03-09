@@ -52,7 +52,37 @@ const Chatbot = () => {
   setInput("");
 
   const text = msg.toLowerCase();
+/* ================= EVENT COORDINATOR ================= */
 
+if (
+  text.includes("coordinator") ||
+  text.includes("co ordinator") ||
+  text.includes("event coordinator")
+) {
+
+  const event = events.find(e =>
+    text.includes(e.name.toLowerCase())
+  );
+
+  if (event) {
+    setMessages(prev => [
+      ...prev,
+      {
+        sender: "bot",
+        text:
+`The event coordinators of ${event.name} are:
+
+👤 ${event.coordinator1}
+📞 ${event.contact1}
+
+👤 ${event.coordinator2}
+📞 ${event.contact2}`
+      }
+    ]);
+    return;
+  }
+
+}
 /* ================= EVENT NAME SEARCH ================= */
 
 const event = events.find(e =>
@@ -141,7 +171,7 @@ if (text.includes("venue")) {
 }
 /* ================= lunch QUESTION ================= */
 
-if (text.includes("lunch")) {
+if (text.includes("lunch") || text.includes("food") || text.includes("meal") || text.includes("eat")) {
 
   setMessages(prev => [
     ...prev,
@@ -153,20 +183,7 @@ if (text.includes("lunch")) {
 
   return;
 }
-/* ================= PRIZE QUESTION ================= */
 
-if (text.includes("prize") || text.includes("reward")) {
-
-  setMessages(prev => [
-    ...prev,
-    {
-      sender: "bot",
-      text: "Exciting prizes and certificates will be awarded to the winners of each event. Details will be revealed during the symposium."
-    }
-  ]);
-
-  return;
-}
 /* ================= SMART EVENT SUGGESTIONS ================= */
 
 if (
@@ -275,19 +292,120 @@ if (
 
   return;
 }
-/* ================= REGISTRATION QUESTION ================= */
+/* ================= REGISTRATION ================= */
 
-if (text.includes("register") || text.includes("registration")) {
-
-  const regLinks = events
-    .map(e => `• ${e.name}\n${e.registrationLink}`)
-    .join("\n\n");
+if (
+  text.includes("how to register") ||
+  text.includes("registration process")
+) {
 
   setMessages(prev => [
     ...prev,
     {
       sender: "bot",
-      text: `You can register using these links:\n\n${regLinks}`
+      text:
+"You can register for events using the Google Form links provided for each event on the website."
+    }
+  ]);
+
+  return;
+}
+
+/* ================= HOD QUESTION ================= */
+
+if (text.includes("hod")) {
+
+  setMessages(prev => [
+    ...prev,
+    {
+      sender: "bot",
+      text:
+"The Head of the Department of Artificial Intelligence and Data Science at Meenakshi Sundararajan Engineering College is Mrs. Mathangi Narayanan. "
+    }
+  ]);
+
+  return;
+}
+/* ================= MSEC ================= */
+
+if (text.includes("msec")) {
+
+  setMessages(prev => [
+    ...prev,
+    {
+      sender: "bot",
+      text:
+"MSEC stands for Meenakshi Sundararajan Engineering College, a reputed engineering institution in Chennai under the KRS Group."
+    }
+  ]);
+
+  return;
+}
+/* ================= CELISTA ================= */
+
+if (text.includes("celista")) {
+
+  setMessages(prev => [
+    ...prev,
+    {
+      sender: "bot",
+      text:
+"CELISTA is the annual technical symposium organized by the Department of Artificial Intelligence and Data Science at Meenakshi Sundararajan Engineering College."
+    }
+  ]);
+
+  return;
+}
+/* ================= REGISTRATION FEE ================= */
+
+if (
+  text.includes("fee") ||
+  text.includes("registration fee")
+) {
+
+  setMessages(prev => [
+    ...prev,
+    {
+      sender: "bot",
+      text:
+"There is no registration fee."
+    }
+  ]);
+
+  return;
+}
+/* ================= TRANSPORT ================= */
+
+if (
+  text.includes("transport") ||
+  text.includes("bus") ||
+  text.includes("travel")
+) {
+
+  setMessages(prev => [
+    ...prev,
+    {
+      sender: "bot",
+      text:
+"Participants can reach Meenakshi Sundararajan Engineering College using nearby public transport:\n Bus Stop: Liberty (Meenakshi College)\n Railway Station: Kodambakkam\n Metro Station: Vadapalani"
+    }
+  ]);
+
+  return;
+}
+/* ================= CERTIFICATES ================= */
+
+if (
+  text.includes("certificate") ||
+  text.includes("certificates")
+) {
+
+  setMessages(prev => [
+    ...prev,
+    {
+      sender: "bot",
+      text:
+"Yes! Participation certificates will be provided for all participants and winners will receive additional prizes and certificates."
     }
   ]);
 
@@ -309,7 +427,7 @@ if (text.includes("register") || text.includes("registration")) {
     });
 
     const result = await res.json();
-    const reply = result?.data?.[0] || "Sorry, I couldn't understand.";
+    const reply = result?.data?.[0] || "I can help you regarding the queries about Celista 2k26.";
 
     setMessages(prev => [...prev, { sender: "bot", text: reply }]);
 

@@ -75,11 +75,15 @@
   padding:10px;
 
   overflow-y:auto;
+  overflow-x:hidden;
 
   display:flex;
   flex-direction:column;
 
   overscroll-behavior:contain;
+
+  -webkit-overflow-scrolling:touch;   /* smooth scroll iOS */
+  touch-action:pan-y;                 /* allow vertical touch scroll */
 }
 
 

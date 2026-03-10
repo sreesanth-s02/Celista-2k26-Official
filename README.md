@@ -1,16 +1,138 @@
-# React + Vite
+# 🚀 Celista 2K26 Symposium Official Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Official website for **Celista 2K26**, a national-level technical symposium organized by the **Department of Artificial Intelligence & Data Science**.
 
-Currently, two official plugins are available:
+This platform allows participants to explore symposium events, view details, and stay updated with announcements.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🌐 Project Overview
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+The **Celista 2K26 Website** is a modern, responsive web application designed to showcase symposium events and provide an engaging user experience.
 
-## Expanding the ESLint configuration
+The goal of this project is to create a **clean, fast, and accessible platform** for students to discover and participate in symposium activities.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+This project focuses on:
+
+- Responsive UI design
+- Smooth navigation
+- Optimized performance
+- Modular frontend architecture
+
+---
+
+## 🎯 Key Features
+
+- Modern and responsive UI
+- Event listing and event detail pages
+- Smooth navigation between sections
+- Mobile-friendly design
+- Optimized frontend performance
+- Component-based architecture using React
+
+---
+
+## 🛠 Tech Stack
+
+### Frontend
+- React.js
+- HTML5
+- CSS3
+- JavaScript
+
+### Tools
+- Git
+- GitHub
+- VS Code
+- Vite
+
+---
+
+## 🧠 Project Structure
+
+The project follows a **component-based architecture** using React.
+
+```
+src/
+ ├── components/
+ │   ├── Navbar
+ │   ├── EventCard
+ │   └── CountdownTimer
+ │
+ ├── pages/
+ │   ├── Home
+ │   ├── Events
+ │   ├── EventDetails
+ │   └── About
+```
+
+This structure keeps the code **modular, scalable, and maintainable**.
+
+---
+
+## 🌍 Live Demo
+
+[🚀 Visit Website](https://celista2k26.web.app)
+
+---
+
+## ⚙️ Installation & Setup
+
+Clone the repository
+
+```bash
+git clone https://github.com/sreesanth-s02/Celista-2k26-Official.git
+```
+
+Navigate to the project folder
+
+```bash
+cd Celista-2k26-Official
+```
+
+Install dependencies
+
+```bash
+npm install
+```
+
+Run the development server
+
+```bash
+npm run dev
+```
+
+---
+
+## 🤝 Contributors
+
+Developed by the **Celista 2K26 Web Team**
+
+- Sreesanth
+- Eraianbu
+- Sanjita
+- Sudharsann
+- Sreenidhi
+
+---
+
+## 🎯 Learning Outcomes
+
+Through this project we gained experience in:
+
+- Building real-world web applications
+- React component architecture
+- UI/UX design principles
+- Git and GitHub collaboration
+- Frontend performance optimization
+
+---
+
+## 🔗 Connect
+
+- GitHub: https://github.com/sreesanth-s02
+- LinkedIn: https://linkedin.com/in/sreesanth226
+
+---
+
+⭐ If you like this project, feel free to **star the repository**.

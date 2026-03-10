@@ -74,15 +74,15 @@ export default function ThreeCanvas() {
 
       // 🔥 SCROLL BASED ROTATION ONLY
       gsap.to(logo.rotation, {
-        y: Math.PI * 4, // 2 full spins
-        ease: "none",
-        scrollTrigger: {
-          trigger: "#hero",
-          start: "top top",
-          end: "bottom top",
-          scrub: 1.5,
-        },
-      });
+  y: Math.PI * 4, // 2 spins
+  ease: "none",
+  scrollTrigger: {
+    trigger: document.body,
+    start: "top top",
+    end: "bottom bottom",
+    scrub: true,
+  },
+});
     });
 
     const handleResize = () => {

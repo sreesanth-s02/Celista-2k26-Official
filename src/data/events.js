@@ -156,7 +156,7 @@ Your cricket knowledge and decision-making skills will be tested.`,
 fullDescription:`Round 1 – Cricket Quiz
 Participants answer questions about players, teams, records, match situations, and strategies.
 
-Further Rounds
+Round 2 - Cricket Auction Challenge
 Qualified teams face interactive challenges simulating real cricket team management.
 Participants must analyze player performance and build a balanced squad.
 

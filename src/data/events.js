@@ -173,7 +173,7 @@ prerequisites:[
 rules:[
 "Team size: 1–4 members",
 "Participants must follow quiz time limits",
-"No mobile phones allowed",
+"Mobile phones allowed",
 "Judges' decision will be final"
 ],
 
@@ -410,7 +410,7 @@ registrationLink:"https://forms.gle/j6VtXWA3UjkS5Zj9A",
 date:"17-03-2026",
 time:"09:00 AM",
 coordinator1:"Paranthaman P",
-contact1:"+91 9840236868",
+contact1:"+91 93616 63604",
 coordinator2:"Kanishka K",
 contact2:"+91 6381161445",
 staffCoordinator:"Asst Prof. Mrs. Prema"
